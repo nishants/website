@@ -1,4 +1,6 @@
 $splash_height: 300px;
+$splash_stages: 4;
+
 #homepage{
   position: relative;
   .homepage-splash{
@@ -10,18 +12,27 @@ $splash_height: 300px;
     background-color: green;
   }
 
-  .homepage-content{
+  .homepage-content-container{
     position: relative;
-    top: $splash_height;
 
     .homepage-splash-tint{
       height: $splash_height;
       background-color: transparent;
+      ul.splash-scroll-monitor{
+        height: 100%;
+        @extend .undo-list;
+        > li {
+          height: calc(100% / #{$splash_stages});
+        }
+      }
     }
-    height: 200vh;
-    background-color: black;
-    h1 {
-      color: white;
+
+    .homepage-content{
+      height: 200vh;
+      background-color: black;
+      h1 {
+        color: white;
+      }
     }
   }
 }
