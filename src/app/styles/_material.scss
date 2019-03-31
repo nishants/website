@@ -1,0 +1,13 @@
+$slow_time: 500ms;
+$transition_time: 300ms;
+$transition_function: ease;
+//$transition_function: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+$transition: all $transition_time $transition_function;
+
+$inside_card_shodow: inset 2px 2px 20px 0px rgba(0, 0, 0, 0.75);
+$input_inset_shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+$elevated_card_shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
+$elevated_card_inset_shadow: inset 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
+
+$block_screen_zindex: 99999;
