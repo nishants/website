@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Splash from './Splash';
+import ScrollListener from '../../shared/ScrollListener';
 
 const scrolledReached = selector => document.querySelector(selector).getClientRects()[0].y < 1;
 
@@ -13,20 +14,21 @@ class HomePage extends React.PureComponent{
   };
 
   componentDidMount(){
-    window.addEventListener('scroll', ()=> {
+    const onWindowScroll = ()=> {
       const homepageReached = scrolledReached("#homepage .homepage-content");
       let splashScrollState = 'four-fill';
 
       if(!homepageReached) {
-          splashScrollState =
-            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(4)") ? 'four-fill' :
+        splashScrollState =
+          scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(4)") ? 'four-fill' :
             scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(3)") ? 'three-expand':
-            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(2)") ? 'two-begin'  :
-            'one-sketch';
+              scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(2)") ? 'two-begin'  :
+                'one-sketch';
       }
 
       this.setState({homepageReached, splashScrollState})
-    });
+    };
+    this.scrollListener = ScrollListener.$window(onWindowScroll);
   }
 
   render(){
