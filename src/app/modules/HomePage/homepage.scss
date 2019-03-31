@@ -1,0 +1,27 @@
+$splash_height: 300px;
+#homepage{
+  position: relative;
+  .homepage-splash{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $splash_height;
+    background-color: green;
+  }
+
+  .homepage-content{
+    position: relative;
+    top: $splash_height;
+
+    .homepage-splash-tint{
+      height: $splash_height;
+      background-color: transparent;
+    }
+    height: 200vh;
+    background-color: black;
+    h1 {
+      color: white;
+    }
+  }
+}

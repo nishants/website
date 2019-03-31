@@ -1,5 +1,7 @@
 @import 'styles/_base.scss';
 
+@import './modules/HomePage/homepage';
+
 body {
   //background: $theme_dark_color; TODO remove
   margin: 0 !important;
