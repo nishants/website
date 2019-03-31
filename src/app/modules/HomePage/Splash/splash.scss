@@ -8,7 +8,7 @@ $bulb-initial-blue : 5px;
 $two-bulb-blur   : 2px;
 
 $transition-time   : 1000ms;
-$bg-transition-time   : 300ms;
+$bg-transition-time   : 1000ms;
 $transition-function   : ease;
 $one-transition-time: $transition-time;
 
@@ -29,12 +29,11 @@ $four-slide-offset : 25vh;
 }
 
 #homepage-splash{
-
+  background-color: black;
   .scroller{
     height: 500px;
     width: 100vw;
     position: relative;
-    background-color: white;
     @include transition(#{background $bg-transition-time $transition-function, transform $transition-time $transition-function});
 
     .bulb, .bulb-outline{
