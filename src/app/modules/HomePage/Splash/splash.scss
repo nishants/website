@@ -1,0 +1,127 @@
+$bulb-height: 168px;
+$bulb-width : 108px;
+$circle-size:$bulb-height + 70;
+$circle-scale-two : 2;
+$circle-scale-three: 5;
+
+$bulb-initial-blue : 5px;
+$two-bulb-blur   : 2px;
+
+$transition-time   : 300ms;
+$transition-function   : ease;
+$one-transition-time: $transition-time;
+
+$two-slide-offset  : 5vh;
+$three-slide-offset: 10vh;
+$four-slide-offset : 25vh;
+
+@keyframes float {
+  0% {
+    @include transform(translateY(0px));
+  }
+  50% {
+    @include transform(translateY(-20px));
+  }
+  100% {
+    @include transform(translateY(0px));
+  }
+}
+
+#homepage-splash{
+
+  .scroller{
+    height: 500px;
+    width: 100vw;
+    position: relative;
+    background-color: white;
+    @include transition(#{background $transition-time $transition-function, transform $transition-time $transition-function});
+
+    .bulb, .bulb-outline{
+      position: absolute;
+      height  : $bulb-height;
+      width   : $bulb-width;
+      left    : calc(50% - #{$bulb-width/2});
+      top     : calc(50% - #{$bulb-height/2});
+      @include transition(opacity $transition-time $transition-function);
+    }
+    .circle{
+      position: absolute;
+      height  : $circle-size;
+      width   : $circle-size;
+      left    : calc(50% - #{$circle-size/2});
+      top     : calc(50% - #{$circle-size/2});
+      background-color: black;
+      border-radius: 50%;
+      @include transition(transform $transition-time $transition-function);
+      @include transform(scale(0))
+    }
+    .bulb{
+      opacity: 0;
+      filter: blur($bulb-initial-blue) grayscale(100%);
+    }
+  }
+
+  .scroller.one-sketch{
+    background-color: #fbfbfb;
+    .circle{
+      @include transform(scale(1));
+    }
+    .bulb-outline{
+      opacity: 0;
+    }
+    .bulb{
+      opacity: 1;
+      filter: blur($bulb-initial-blue) grayscale(100%);
+    }
+  }
+
+  .scroller.two-begin{
+    background-color: #eee;
+    @include transform(translateY(-$two-slide-offset));
+
+    .circle{
+      @include transform(scale($circle-scale-two));
+    }
+    .bulb-outline{
+      opacity: 0;
+    }
+    .bulb{
+      opacity: 1;
+      filter:blur($two-bulb-blur) grayscale(50%);
+    }
+  }
+
+  .scroller.three-expand{
+    background-color: rgba(0, 0, 0, 0.62);
+    @include transform(translateY(-$three-slide-offset));
+
+    .circle{
+      @include transform(scale($circle-scale-three));
+    }
+    .bulb-outline{
+      opacity: 0;
+    }
+    .bulb{
+      opacity: 1;
+      filter: blur(0) grayscale(50%);
+    }
+  }
+
+  .scroller.four-fill{
+    background-color: black;
+    @include transform(translateY(-$four-slide-offset));
+
+    .circle{
+      @include transform(scale(0));
+    }
+    .bulb-outline{
+      opacity: 0;
+    }
+    .bulb{
+      opacity: 1;
+      filter: blur(0) grayscale(0%);
+      @include animation(float 6s ease-in-out infinite);
+    }
+  }
+
+}

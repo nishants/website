@@ -1,25 +1,28 @@
 import React from 'react';
 
+import Splash from './Splash';
+
 const scrolledReached = selector => document.querySelector(selector).getClientRects()[0].y < 1;
+
 
 class HomePage extends React.PureComponent{
 
   state = {
-    splashScrollState: 'one',
+    splashScrollState: 'one-sketch',
     homepageReached: false,
   };
 
   componentDidMount(){
     window.addEventListener('scroll', ()=> {
       const homepageReached = scrolledReached("#homepage .homepage-content");
-      let splashScrollState = 'four';
+      let splashScrollState = 'four-fill';
 
       if(!homepageReached) {
           splashScrollState =
-            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(4)") ? 'four' :
-            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(3)") ? 'three':
-            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(2)") ? 'two'  :
-            'one';
+            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(4)") ? 'four-fill' :
+            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(3)") ? 'three-expand':
+            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(2)") ? 'two-begin'  :
+            'one-sketch';
       }
 
       this.setState({homepageReached, splashScrollState})
@@ -27,10 +30,11 @@ class HomePage extends React.PureComponent{
   }
 
   render(){
+    const {splashScrollState} = this.state;
     return (
       <article id='homepage'>
         <section className='homepage-splash'>
-          <h1>Spash splash</h1>
+          <Splash splashState={splashScrollState}/>
         </section>
         <section className='homepage-content-container'>
           <section className='homepage-splash-tint'>
