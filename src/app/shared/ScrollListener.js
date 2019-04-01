@@ -2,14 +2,15 @@ const SCROLL_PROCESS_DELAY_MS = 10;
 
 let listeners = [];
 
-const processScrollEvent = (event) => {
-  console.log({event});
-  listeners.forEach(l=> l())
-};
+const processScrollEvent = event => listeners.forEach(l => l(event));
 
 const createWindowListener = newListener => {
   listeners.push(newListener);
-  return {destroy: () => {listeners = listeners.filter(l => l === newListener)}};
+  return {
+    destroy: () => {
+      listeners = listeners.filter(l => l === newListener);
+    }
+  };
 };
 
 const ScrollListener = {
@@ -20,7 +21,7 @@ const throttled = callback => {
   let nextCall;
 
   return event => {
-    if(nextCall) clearTimeout(nextCall);
+    if (nextCall) clearTimeout(nextCall);
     nextCall = setTimeout(() => callback(event), SCROLL_PROCESS_DELAY_MS);
   };
 };
