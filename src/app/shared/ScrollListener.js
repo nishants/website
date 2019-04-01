@@ -1,4 +1,4 @@
-const SCROLL_PROCESS_DELAY_MS = 100;
+const SCROLL_PROCESS_DELAY_MS = 10;
 
 let listeners = [];
 

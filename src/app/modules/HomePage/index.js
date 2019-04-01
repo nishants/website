@@ -3,27 +3,29 @@ import React from 'react';
 import Splash from './Splash';
 import ScrollListener from '../../shared/ScrollListener';
 
-const scrolledReached = selector => document.querySelector(selector).getClientRects()[0].y < 1;
+const scrolledReached = (selector, offset = 0) => document.querySelector(selector).getClientRects()[0].y < -offset;
 
 
 class HomePage extends React.PureComponent{
 
   state = {
-    splashScrollState: 'one-sketch',
+    splashScrollState: '',
     homepageReached: false,
   };
 
   componentDidMount(){
+    const scrollOffset = 10;
     const onWindowScroll = ()=> {
-      const homepageReached = scrolledReached("#homepage .homepage-content");
-      let splashScrollState = 'four-fill';
+      const homepageReached = scrolledReached("#homepage .homepage-content", scrollOffset);
+      let splashScrollState = '';
 
       if(!homepageReached) {
         splashScrollState =
-          scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(4)") ? 'four-fill' :
-            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(3)") ? 'three-expand':
-              scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(2)") ? 'two-begin'  :
-                'one-sketch';
+          scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(4)", ) ? 'four' :
+            scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(3)") ? 'three':
+              scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(2)") ? 'two'  :
+              scrolledReached("#homepage ul.splash-scroll-monitor > li:nth-child(1)", 5) ? 'one'  :
+                '';
       }
 
       this.setState({homepageReached, splashScrollState})
