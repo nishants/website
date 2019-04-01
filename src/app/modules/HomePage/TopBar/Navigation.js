@@ -25,13 +25,13 @@ class Navigation extends React.PureComponent {
         <div className="navigation-links">
           <ul>
             <li className="portfolio-link">
-              <Link to="portfolio"> Portfolio </Link>
+              <Link to="/portfolio"> Portfolio </Link>
             </li>
             <li className="work-history-link">
-              <Link to="work-history"> Work History </Link>
+              <Link to="/work-history"> Work History </Link>
             </li>
             <li className="about-me-link">
-              <Link to="about-me"> About Me </Link>
+              <Link to="/about-me"> About Me </Link>
             </li>
           </ul>
           <div className="navigation-indicator" />

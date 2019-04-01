@@ -1,0 +1,14 @@
+.side-bar {
+  text-align: left;
+  padding-left: $side_padding;
+
+  > ul {
+    @extend .undo-list;
+  }
+
+  .demo-links {
+    a {
+      font-style: italic;
+    }
+  }
+}

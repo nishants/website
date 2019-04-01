@@ -6,6 +6,7 @@ import ScrollListener from '../../shared/ScrollListener';
 import ProfileImg from './profile.jpg';
 import Navigation from './TopBar/Navigation';
 
+import SideBar from './SideBar';
 import Portfolio from './Portfolio';
 import WorkHistory from './WorkHistory';
 import AboutMe from './AboutMe';
@@ -112,13 +113,16 @@ class HomePage extends React.Component {
                 <Navigation selectedLink={selectedNavigationLink} />
               </div>
             </div>
-            <section id="tab-view-container">
-              <Switch>
-                <Route path="/portfolio" component={Portfolio} />
-                <Route path="/work-history" component={WorkHistory} />
-                <Route path="/about-me" component={AboutMe} />
-                <Redirect from="/" to="/portfolio" />
-              </Switch>
+            <section className="tab-view-container">
+              <SideBar />
+              <div className="route-view-container">
+                <Switch>
+                  <Route path="/portfolio/" component={Portfolio} />
+                  <Route path="/work-history" component={WorkHistory} />
+                  <Route path="/about-me" component={AboutMe} />
+                  <Redirect from="/" to="/portfolio" />
+                </Switch>
+              </div>
             </section>
           </section>
         </section>

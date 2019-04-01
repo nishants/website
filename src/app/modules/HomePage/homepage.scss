@@ -31,6 +31,20 @@ $homepage_side_bar_width: 300px;
     .homepage-content {
       height: 200vh;
       background-color: white;
+      .tab-view-container {
+        @extend .resize-container;
+        .side-bar,
+        .route-view-container {
+          float: left;
+        }
+        .side-bar {
+          width: $homepage_side_bar_width;
+        }
+
+        .route-view-container {
+          width: calc(100% - #{$homepage_side_bar_width});
+        }
+      }
     }
   }
 }
@@ -38,3 +52,4 @@ $homepage_side_bar_width: 300px;
 @import './Splash/splash';
 @import './TopBar/top-bar';
 @import './Portfolio/index';
+@import './SideBar/sidebar';
