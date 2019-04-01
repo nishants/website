@@ -1,0 +1,10 @@
+.navigation {
+  .profile-info {
+    .small-profile-image {
+      @include transform(translateX(0));
+    }
+    .profile-labels {
+      @include transform(translateX(5px) scale($small_profile_scale));
+    }
+  }
+}

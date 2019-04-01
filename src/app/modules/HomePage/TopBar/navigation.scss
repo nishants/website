@@ -1,0 +1,62 @@
+$link_width: 150px;
+
+.navigation {
+  padding: $side_padding;
+  @extend .resize-container;
+
+  .profile-info {
+    position: relative;
+    width: $homepage_side_bar_width;
+    overflow: hidden;
+    float: left;
+
+    .small-profile-image {
+      display: block;
+      float: left;
+      height: $small_profile_img_height;
+      @include transition($transition);
+      @include transformOrigin(0 50%);
+      @include transform(
+        scale(calc(1 /#{$small_profile_scale}))
+          translateX(-$small_profile_img_width)
+      );
+    }
+    .profile-labels {
+      @include transition($transition);
+      @include transformOrigin(0 0);
+      @include transform(translateX(-$small_profile_img_width));
+
+      text-align: left;
+      float: left;
+      .profile-name,
+      .profile-title {
+        display: block;
+      }
+
+      .profile-name {
+        font-weight: $font_weight_bold;
+        font-size: $large_font;
+      }
+
+      .profile-title {
+        font-size: $small_font;
+      }
+    }
+  }
+
+  .navigation-links {
+    float: left;
+    line-height: $navigation_links_height;
+    > ul {
+      @extend .undo-list;
+      @extend .resize-container;
+      > li {
+        float: left;
+        //padding: 0 $side_padding;
+        width: $link_width;
+      }
+    }
+  }
+}
+
+@import './navigation.pointer';

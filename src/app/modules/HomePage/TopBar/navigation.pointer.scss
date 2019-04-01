@@ -1,0 +1,20 @@
+$navigation_pointer_radius: 5px;
+$navigation_pointer_color: $blue;
+$navigation_pointer_heght: 5px;
+
+.navigation {
+  .navigation-indicator {
+    height: $navigation_pointer_heght;
+    background: $navigation_pointer_color;
+    border-radius: $navigation_pointer_radius;
+
+    @include transition($transition);
+    @include transformOrigin(50% 50%);
+  }
+}
+
+.navigation.portfolio {
+  .navigation-indicator {
+    width: 150px;
+  }
+}

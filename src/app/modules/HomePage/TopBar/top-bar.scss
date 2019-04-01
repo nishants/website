@@ -6,6 +6,8 @@ $small_profile_img_height: 36px;
 $small_profile_img_width: 36px;
 $small_profile_scale: 0.8;
 
+$navigation_links_height: 46px;
+
 #top-bar {
   position: relative;
   .profile {
@@ -33,49 +35,8 @@ $small_profile_scale: 0.8;
       @include transition($transition);
     }
   }
-  .navigation {
-    padding: $side_padding;
-    @extend .resize-container;
 
-    .profile-info {
-      position: relative;
-      width: $homepage_side_bar_width;
-      overflow: hidden;
-
-      .small-profile-image {
-        display: block;
-        float: left;
-        height: $small_profile_img_height;
-        @include transition($transition);
-        @include transformOrigin(0 50%);
-        @include transform(
-          scale(calc(1 /#{$small_profile_scale}))
-            translateX(-$small_profile_img_width)
-        );
-      }
-      .profile-labels {
-        @include transition($transition);
-        @include transformOrigin(0 0);
-        @include transform(translateX(-$small_profile_img_width));
-
-        text-align: left;
-        float: left;
-        .profile-name,
-        .profile-title {
-          display: block;
-        }
-
-        .profile-name {
-          font-weight: $font_weight_bold;
-          font-size: $large_font;
-        }
-
-        .profile-title {
-          font-size: $small_font;
-        }
-      }
-    }
-  }
+  @import './navigation';
 
   .profile-bar.fixed-to-page {
     .profile {
@@ -99,22 +60,14 @@ $small_profile_scale: 0.8;
   #top-bar {
     .profile {
       img {
-        @include transform(translateY(-2 * $profile_full_image_height));
+        opacity: 0;
+        @include transform(translateY(-100%));
       }
       .slope-bg {
         @include transform(rotate(0deg));
       }
     }
-    .navigation {
-      .profile-info {
-        .small-profile-image {
-          @include transform(translateX(0));
-        }
-        .profile-labels {
-          @include transform(translateX(5px) scale($small_profile_scale));
-        }
-      }
-    }
+    @import './navigation.profile-reached';
   }
 }
 
