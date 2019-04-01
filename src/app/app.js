@@ -6,7 +6,7 @@ import './app.scss';
 import Routes from './routes';
 
 Sentry.init({
-  dsn: 'https://6eee2574919644e1bdbdf7bb93dd6444@sentry.io/1408911'
+  dsn: 'https://7bf552970ea54e0ca079bd71c62f3d90@sentry.io/1408911'
 });
 
 class App extends React.PureComponent {
