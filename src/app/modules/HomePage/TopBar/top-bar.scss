@@ -1,11 +1,14 @@
 $profile_full_image_height: 120px;
 $slope_top_offset: 40px;
+$side_padding: 10px;
 
 #top-bar {
+  position: relative;
   .profile-bar {
-    padding: 0 10px;
+    padding: 0 $side_padding;
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    width: 100%;
     .profile {
       img {
         position: relative;
@@ -27,6 +30,9 @@ $slope_top_offset: 40px;
       @include transform(rotate(2deg));
       @include transition($transition);
     }
+  }
+  .navigation {
+    padding: 0 $side_padding;
 
     .profile-info {
       position: relative;
@@ -48,7 +54,8 @@ $slope_top_offset: 40px;
   }
 
   .profile-bar.fixed-to-page {
-    @include transform(translateY(-$profile_full_image_height));
+    top: -$profile_full_image_height;
+    left: 0;
   }
 }
 

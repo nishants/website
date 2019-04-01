@@ -76,12 +76,14 @@ class HomePage extends React.PureComponent {
                   <div className="profile-image-container">
                     <img src={PorfileImg} alt="Nishant Singh" />
                   </div>
-                  <div className="profile-info">
-                    <label className="profile-name">Nishant Singh</label>
-                    <label className="profile-title">
-                      Designer | Craftsman | Constultant
-                    </label>
-                  </div>
+                </div>
+              </div>
+              <div className="navigation">
+                <div className="profile-info">
+                  <label className="profile-name">Nishant Singh</label>
+                  <label className="profile-title">
+                    Designer | Craftsman | Constultant
+                  </label>
                 </div>
               </div>
             </div>
