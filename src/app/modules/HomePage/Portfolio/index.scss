@@ -1,0 +1,12 @@
+#portfolio-page {
+  ul.portfolio-deck {
+    @extend .undo-list;
+    @extend .resize-container;
+
+    > li {
+      float: left;
+      margin: 10px;
+    }
+  }
+}
+@import 'portfolio-card';
