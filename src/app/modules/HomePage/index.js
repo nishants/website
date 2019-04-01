@@ -11,7 +11,7 @@ import WorkHistory from './WorkHistory';
 import AboutMe from './AboutMe';
 
 const scrolledReached = (selector, offset = 0) =>
-  document.querySelector(selector).getClientRects()[0].y < -offset;
+  document.querySelector(selector).getClientRects()[0].y <= -offset;
 
 class HomePage extends React.Component {
   state = {
@@ -23,8 +23,7 @@ class HomePage extends React.Component {
   componentDidMount() {
     const onWindowScroll = () => {
       const profileReached = scrolledReached(
-        '#homepage .homepage-content .fixed-to-page .profile',
-        40
+        '#homepage .homepage-content .fixed-to-page .navigation'
       );
       const stickNavigation = scrolledReached(
         '#homepage .homepage-content .fixed-to-page .navigation'
@@ -57,6 +56,18 @@ class HomePage extends React.Component {
     };
     this.scrollListener = ScrollListener.$window(onWindowScroll);
   }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.onRouteChanged();
+    }
+  }
+
+  onRouteChanged = () => {
+    document
+      .querySelector('#homepage .homepage-content .fixed-to-page .navigation')
+      .scrollIntoView({ behavior: 'smooth' });
+  };
 
   render() {
     const { splashScrollState, profileReached, stickNavigation } = this.state;

@@ -1,7 +1,7 @@
 $link_width: 150px;
 
 .navigation {
-  padding: $side_padding;
+  padding: 10px $side_padding;
   @extend .resize-container;
 
   .profile-info {
@@ -52,10 +52,17 @@ $link_width: 150px;
       @extend .resize-container;
       > li {
         float: left;
-        //padding: 0 $side_padding;
         width: $link_width;
+        color: $light_black_text;
+        a {
+          display: block;
+          color: inherit;
+          text-decoration: none;
+          @include transition($transition);
+        }
 
         &.selected-link {
+          color: $dark_black_text;
           font-weight: $font_weight_bold;
         }
       }
