@@ -2,22 +2,23 @@ $profile_full_image_height: 120px;
 $slope_top_offset: 40px;
 $side_padding: 10px;
 
+$small_profile_img_height: 36px;
+$small_profile_img_width: 36px;
+
 #top-bar {
   position: relative;
-  .profile-bar {
+  .profile {
     padding: 0 $side_padding;
     overflow: hidden;
     position: absolute;
     width: 100%;
-    .profile {
-      img {
-        position: relative;
-        display: block;
-        height: $profile_full_image_height;
-        border: 3px solid white;
-        border-radius: 1px;
-        @include transition($transition);
-      }
+    img {
+      position: relative;
+      display: block;
+      height: $profile_full_image_height;
+      border: 3px solid white;
+      border-radius: 1px;
+      @include transition($transition);
     }
     .slope-bg {
       position: absolute;
@@ -32,44 +33,91 @@ $side_padding: 10px;
     }
   }
   .navigation {
-    padding: 0 $side_padding;
+    padding: $side_padding;
+    @extend .resize-container;
 
     .profile-info {
       position: relative;
-      text-align: left;
-      .profile-name,
-      .profile-title {
+      width: $homepage_side_bar_width;
+      overflow: hidden;
+
+      .small-profile-image {
         display: block;
+        float: left;
+        height: $small_profile_img_height;
+        @include transition($transition);
+        @include transform(translateX(-$small_profile_img_width));
       }
+      .profile-labels {
+        @include transition($transition);
+        @include transformOrigin(0 0);
+        @include transform(translateX(-$small_profile_img_width));
 
-      .profile-name {
-        font-weight: $font_weight_bold;
-        font-size: $large_font;
-      }
+        text-align: left;
+        float: left;
+        .profile-name,
+        .profile-title {
+          display: block;
+        }
 
-      .profile-title {
-        font-size: $small_font;
+        .profile-name {
+          font-weight: $font_weight_bold;
+          font-size: $large_font;
+        }
+
+        .profile-title {
+          font-size: $small_font;
+        }
       }
     }
   }
 
   .profile-bar.fixed-to-page {
-    top: -$profile_full_image_height;
+    .profile {
+      top: -$profile_full_image_height;
+      left: 0;
+    }
+  }
+
+  .fixed-to-window {
+    position: fixed;
+    top: 0;
     left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background-color: white;
   }
 }
 
 #homepage.profile-reached {
   #top-bar {
-    .profile-bar {
-      .profile {
-        img {
-          @include transform(translateY(-2 * $profile_full_image_height));
-        }
+    .profile {
+      img {
+        @include transform(translateY(-2 * $profile_full_image_height));
       }
       .slope-bg {
         @include transform(rotate(0deg));
       }
+    }
+    .navigation {
+      .profile-info {
+        .small-profile-image {
+          @include transform(translateX(0));
+        }
+        .profile-labels {
+          @include transform(translateX(5px) scale(0.8));
+        }
+      }
+    }
+  }
+}
+
+#homepage.stick-navigation {
+  #top-bar {
+    .fixed-to-window {
+      opacity: 1;
+      pointer-events: initial;
     }
   }
 }

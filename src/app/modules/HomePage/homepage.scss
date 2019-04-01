@@ -1,9 +1,11 @@
 $splash_height: 500px;
 $splash_stages: 4;
 
-#homepage{
+$homepage_side_bar_width: 300px;
+
+#homepage {
   position: relative;
-  .homepage-splash{
+  .homepage-splash {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,13 +13,13 @@ $splash_stages: 4;
     height: $splash_height;
   }
 
-  .homepage-content-container{
+  .homepage-content-container {
     position: relative;
 
-    .homepage-splash-tint{
+    .homepage-splash-tint {
       height: $splash_height;
       background-color: transparent;
-      ul.splash-scroll-monitor{
+      ul.splash-scroll-monitor {
         height: 100%;
         @extend .undo-list;
         > li {
@@ -26,12 +28,12 @@ $splash_stages: 4;
       }
     }
 
-    .homepage-content{
+    .homepage-content {
       height: 200vh;
       background-color: white;
     }
   }
 }
 
-@import "./Splash/splash";
-@import "./TopBar/top-bar";
+@import './Splash/splash';
+@import './TopBar/top-bar';
