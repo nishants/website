@@ -54,6 +54,10 @@ $link_width: 150px;
         float: left;
         //padding: 0 $side_padding;
         width: $link_width;
+
+        &.selected-link {
+          font-weight: $font_weight_bold;
+        }
       }
     }
   }

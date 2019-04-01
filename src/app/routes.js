@@ -1,15 +1,13 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 import HomePage from './modules/HomePage';
 
 const Routes = () => (
   <Router>
-    <Switch>
-      <Route path="/" exact>
-        <HomePage />
-      </Route>
-    </Switch>
+    <Route path="/:tab_id">
+      <HomePage />
+    </Route>
   </Router>
 );
 export default Routes;

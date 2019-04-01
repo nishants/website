@@ -7,6 +7,7 @@ $navigation_pointer_heght: 5px;
     height: $navigation_pointer_heght;
     background: $navigation_pointer_color;
     border-radius: $navigation_pointer_radius;
+    width: 150px;
 
     @include transition($transition);
     @include transformOrigin(50% 50%);
@@ -14,7 +15,25 @@ $navigation_pointer_heght: 5px;
 }
 
 .navigation.portfolio {
+  .portfolio-link {
+    @extend .selected-link;
+  }
+}
+
+.navigation.work-history {
+  .work-history-link {
+    @extend .selected-link;
+  }
   .navigation-indicator {
-    width: 150px;
+    @include transform(translateX(100%));
+  }
+}
+
+.navigation.about-me {
+  .about-me-link {
+    @extend .selected-link;
+  }
+  .navigation-indicator {
+    @include transform(translateX(200%));
   }
 }

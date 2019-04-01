@@ -1,19 +1,23 @@
 import React from 'react';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 
 import Splash from './Splash';
 import ScrollListener from '../../shared/ScrollListener';
 import ProfileImg from './profile.jpg';
 import Navigation from './TopBar/Navigation';
 
+import Portfolio from './Portfolio';
+import WorkHistory from './WorkHistory';
+import AboutMe from './AboutMe';
+
 const scrolledReached = (selector, offset = 0) =>
   document.querySelector(selector).getClientRects()[0].y < -offset;
 
-class HomePage extends React.PureComponent {
+class HomePage extends React.Component {
   state = {
     splashScrollState: '',
     profileReached: false,
-    stickNavigation: false,
-    selectedNavigationLink: 'portfolio'
+    stickNavigation: false
   };
 
   componentDidMount() {
@@ -55,12 +59,14 @@ class HomePage extends React.PureComponent {
   }
 
   render() {
+    const { splashScrollState, profileReached, stickNavigation } = this.state;
+
     const {
-      splashScrollState,
-      profileReached,
-      stickNavigation,
-      selectedNavigationLink
-    } = this.state;
+      match: {
+        params: { tab_id: selectedNavigationLink }
+      }
+    } = this.props;
+
     return (
       <article
         id="homepage"
@@ -95,7 +101,14 @@ class HomePage extends React.PureComponent {
                 <Navigation selectedLink={selectedNavigationLink} />
               </div>
             </div>
-            <h1>Welcome Nishant !</h1>
+            <section id="tab-view-container">
+              <Switch>
+                <Route path="/portfolio" component={Portfolio} />
+                <Route path="/work-history" component={WorkHistory} />
+                <Route path="/about-me" component={AboutMe} />
+                <Redirect from="/" to="/portfolio" />
+              </Switch>
+            </section>
           </section>
         </section>
       </article>
@@ -103,4 +116,4 @@ class HomePage extends React.PureComponent {
   }
 }
 
-export default HomePage;
+export default withRouter(HomePage);
