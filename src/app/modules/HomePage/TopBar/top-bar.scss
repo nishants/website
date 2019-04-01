@@ -4,6 +4,7 @@ $side_padding: 10px;
 
 $small_profile_img_height: 36px;
 $small_profile_img_width: 36px;
+$small_profile_scale: 0.8;
 
 #top-bar {
   position: relative;
@@ -46,7 +47,11 @@ $small_profile_img_width: 36px;
         float: left;
         height: $small_profile_img_height;
         @include transition($transition);
-        @include transform(translateX(-$small_profile_img_width));
+        @include transformOrigin(0 50%);
+        @include transform(
+          scale(calc(1 /#{$small_profile_scale}))
+            translateX(-$small_profile_img_width)
+        );
       }
       .profile-labels {
         @include transition($transition);
@@ -106,7 +111,7 @@ $small_profile_img_width: 36px;
           @include transform(translateX(0));
         }
         .profile-labels {
-          @include transform(translateX(5px) scale(0.8));
+          @include transform(translateX(5px) scale($small_profile_scale));
         }
       }
     }
