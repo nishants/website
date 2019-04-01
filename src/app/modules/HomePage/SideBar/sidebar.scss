@@ -1,14 +1,54 @@
 .side-bar {
   text-align: left;
   padding-left: $side_padding;
+  font-size: $small_font;
 
   > ul {
     @extend .undo-list;
+    > li {
+      a > i {
+        display: inline-block;
+        width: 20px;
+      }
+    }
+    margin-bottom: 20px;
   }
 
   .demo-links {
     a {
       font-style: italic;
+    }
+  }
+
+  > label {
+    font-weight: $font_weight_bold;
+  }
+
+  .previous-links,
+  .social-links {
+    .linkedin {
+      i {
+        color: $linkedin_blue;
+      }
+    }
+    .twitter {
+      i {
+        color: $twitter_blue;
+      }
+    }
+    .stack-overflow {
+      i {
+        color: $stack_overflow_orange;
+      }
+    }
+    .github {
+      i {
+        color: $github_grey;
+      }
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
     }
   }
 }
