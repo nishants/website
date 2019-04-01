@@ -1,0 +1,52 @@
+$profile_full_image_height: 120px;
+$slope_top_offset: 40px;
+
+#top-bar{
+  .profile-bar{
+    padding: 0 10px;
+    overflow: hidden;
+    .profile{
+      position: relative;
+      z-index: 1;
+      img {
+        display: block;
+        height: $profile_full_image_height;
+        border: 3px solid white;
+        position: relative;
+        border-radius: 1px;
+        @include transition($transition);
+      }
+    }
+    .slope-bg{
+      position: relative;
+      top:  -$profile_full_image_height + $slope_top_offset;
+      left: -10px;
+      height: $profile_full_image_height;
+      width: 150%;
+      background-color: white;
+      @include transformOrigin(0 0);
+      @include transform(rotate(2deg));
+      @include transition($transition);
+    }
+  }
+
+  .profile-bar.fixed-to-page{
+    @include transform(translateY(-$profile_full_image_height));
+  }
+
+}
+
+#homepage.stick-topbar{
+  #top-bar{
+    .profile-bar{
+      .profile{
+        img{
+          @include transform(translateY(-2*$profile_full_image_height));
+        }
+      }
+      .slope-bg{
+        @include transform(rotate(0deg));
+      }
+    }
+  }
+}

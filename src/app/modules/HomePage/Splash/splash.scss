@@ -18,6 +18,11 @@ $two-slide-offset  : 100px;
 $three-slide-offset: 27%;
 $four-slide-offset : 38%;
 
+$one-bulb-state: blur(5px) grayscale(0%);
+$two-bulb-state: blur(1px) grayscale(5%);
+$three-bulb-state: blur(1px) grayscale(10%);
+$four-bulb-state: blur(1px) grayscale(10%);
+
 @keyframes float {
   0% {
     @include transform(translateY(0px));
@@ -47,6 +52,7 @@ $four-slide-offset : 38%;
         width   : $bulb-width;
         filter: blur(1px) grayscale(100%);
         @include transition(opacity $transition-time $transition-function);
+        @include animation(float 6s ease-in-out infinite);
       }
       .bulb{
         position: relative;
@@ -145,7 +151,7 @@ $four-slide-offset : 38%;
     }
     .bulb{
       opacity: 0.5;
-      filter: blur(5px) grayscale(0%);
+      filter: $one-bulb-state;
     }
   }
 
@@ -156,7 +162,7 @@ $four-slide-offset : 38%;
     }
     .bulb{
       opacity: 1;
-      filter: blur(5px) grayscale(0%);
+      filter: $two-bulb-state;
     }
   }
 
@@ -167,7 +173,7 @@ $four-slide-offset : 38%;
     }
     .bulb{
       opacity: 1;
-      filter: blur(1px) grayscale(10%);
+      filter: $three-bulb-state;
     }
   }
 
@@ -183,7 +189,7 @@ $four-slide-offset : 38%;
     }
     .bulb{
       opacity: 1;
-      filter: blur(1px) grayscale(10%);
+      filter: $four-bulb-state;
       @include transition(opacity $transition-time $transition-function);
       @include animation(float 6s ease-in-out infinite);
     }

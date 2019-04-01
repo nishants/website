@@ -2,9 +2,9 @@ import React from 'react';
 
 import Splash from './Splash';
 import ScrollListener from '../../shared/ScrollListener';
+import PorfileImg from './profile.jpg';
 
 const scrolledReached = (selector, offset = 0) => document.querySelector(selector).getClientRects()[0].y < -offset;
-
 
 class HomePage extends React.PureComponent{
 
@@ -16,7 +16,7 @@ class HomePage extends React.PureComponent{
   componentDidMount(){
     const scrollOffset = 10;
     const onWindowScroll = ()=> {
-      const homepageReached = scrolledReached("#homepage .homepage-content", scrollOffset);
+      const homepageReached = scrolledReached("#homepage .homepage-content .fixed-to-page .slope-bg", scrollOffset);
       let splashScrollState = '';
 
       if(!homepageReached) {
@@ -34,9 +34,10 @@ class HomePage extends React.PureComponent{
   }
 
   render(){
-    const {splashScrollState} = this.state;
+    const {splashScrollState, homepageReached} = this.state;
+
     return (
-      <article id='homepage'>
+      <article id='homepage' className={`${homepageReached ? 'stick-topbar' : ''}`}>
         <section className='homepage-splash'>
           <Splash splashState={splashScrollState}/>
         </section>
@@ -50,6 +51,16 @@ class HomePage extends React.PureComponent{
             </ul>
           </section>
           <section className='homepage-content'>
+            <div id='top-bar'>
+              <div className='profile-bar fixed-to-page'>
+                <div className='profile'>
+                  <div className='profile-image-container'>
+                    <img src={PorfileImg} alt='Nishant Singh'/>
+                  </div>
+                </div>
+                <div className='slope-bg'></div>
+              </div>
+            </div>
             <h1>Welcome Nishant !
               {JSON.stringify(this.state)}
             </h1>
