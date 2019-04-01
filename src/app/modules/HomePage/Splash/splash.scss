@@ -38,15 +38,42 @@ $four-slide-offset : 38%;
     position: relative;
     @include transition(#{background $bg-transition-time $transition-function, transform $transition-time $transition-function});
 
-    .bulb, .bulb-outline{
+    .bulb-image{
       position: absolute;
-      height  : $bulb-height;
-      width   : $bulb-width;
       left    : calc(50% - #{$bulb-width/2});
       top     : calc(50% - #{$bulb-height/2});
-      filter: blur(1px) grayscale(100%);
-      @include transition(opacity $transition-time $transition-function);
+      .bulb, .bulb-outline{
+        height  : $bulb-height;
+        width   : $bulb-width;
+        filter: blur(1px) grayscale(100%);
+        @include transition(opacity $transition-time $transition-function);
+      }
+      .bulb{
+        position: relative;
+        top: -$bulb-height;
+        z-index: 1;
+      }
+      .splash-text{
+        position: absolute;
+        top     : calc(50% - #{$bulb-height/2});
+        color: white;
+        width  : calc(100vw - #{$bulb-width/2});
+      }
+
+      .splash-text.pre-text{
+        left: 0;
+        padding-right: 20px;
+        text-align: right;
+        @include transform(translateX(-100%) translateY(-50%));
+      }
+      .splash-text.post-text{
+        text-align: left;
+        padding-left: 20px;
+        left: 100%;
+        @include transform(translateY(-50%));
+      }
     }
+
     .circle{
       position: absolute;
       height  : $circle-size;
