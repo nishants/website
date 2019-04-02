@@ -55,7 +55,11 @@ class Portfolio extends React.PureComponent {
 
   render() {
     const { cards } = this.state;
+    const {
+      searchAndFilter: { searchString }
+    } = this.props;
     const { selectTag } = this;
+    const noneVisible = !cards.find(c => c.visible);
 
     return (
       <div id="portfolio-page">
@@ -67,8 +71,13 @@ class Portfolio extends React.PureComponent {
               </li>
             ) : null
           )}
-          ;
         </ul>
+        {noneVisible && (
+          <span className="no-results-message">
+            {' '}
+            No results for {`"${searchString}"`}{' '}
+          </span>
+        )}
       </div>
     );
   }

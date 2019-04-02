@@ -19,8 +19,9 @@ $navigation_links_height: 46px;
       position: relative;
       display: block;
       height: $profile_full_image_height;
-      border: 3px solid white;
+      border: 3px solid $grey;
       border-radius: 1px;
+      box-shadow: $bar_shadow;
       @include transition($transition);
     }
     .slope-bg {
