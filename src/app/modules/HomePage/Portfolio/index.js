@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import PortfolioCard from './PortfolioCard';
 import data from '../../../config/PortofolioData.json';
-import { searchForKey } from '../actions';
+import { searchForKey, setTags } from '../actions';
 import { scrollToTop } from '../../../shared/util';
 
 const shouldShowCard = (card, searchString) => {
@@ -37,6 +37,15 @@ class Portfolio extends React.PureComponent {
             visible: shouldShowCard(d, searchString)
           }))
         };
+  }
+
+  componentDidMount() {
+    const allTags = data
+      .map(d => d.tags.reduce((all, tag) => all.concat(tag.name), []))
+      .reduce((all, tags) => all.concat(tags), []);
+    this.props.dispatch(
+      setTags(allTags.filter((tag, i) => allTags.indexOf(tag) === i))
+    );
   }
 
   selectTag = searchString => {

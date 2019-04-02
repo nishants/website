@@ -11,7 +11,7 @@ class SearchAndFilter extends React.Component {
     const { activated } = this.state;
     const { setActive, setInActive } = this;
     const {
-      searchAndFilter: { searchString },
+      searchAndFilter: { searchString, tags },
       search
     } = this.props;
 
@@ -29,8 +29,11 @@ class SearchAndFilter extends React.Component {
           />
           <div className="search-and-filter-dropdown">
             <div>
-              {' '}
-              #java, #javascript #ruby #test #ci {JSON.stringify(activated)}
+              {tags.map(t => (
+                <span className="tag-link" onClick={() => search(t)}>
+                  #{t}
+                </span>
+              ))}
             </div>
           </div>
         </div>

@@ -18,6 +18,15 @@ const reducer = (state = INITIAL_STATE, action) => {
         }
       };
 
+    case HOME_ACTIONS.SET_TAGS:
+      return {
+        ...state,
+        searchAndFilter: {
+          ...state.searchAndFilter,
+          tags: action.payload.tags
+        }
+      };
+
     default:
       return state;
   }

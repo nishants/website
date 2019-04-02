@@ -12,10 +12,16 @@
     top: 100%;
     left: 0;
     width: 100%;
+    text-align: left;
     > div {
       @include transition($transition);
       background-color: $light_white;
       padding: 0 10px;
+    }
+    .tag-link {
+      color: $blue;
+      cursor: pointer;
+      margin-right: 5px;
     }
   }
 
