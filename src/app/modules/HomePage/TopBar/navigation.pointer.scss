@@ -1,11 +1,13 @@
 $navigation_pointer_radius: 5px;
 $navigation_pointer_color: $dark_black_text;
-$navigation_pointer_heght: 5px;
+$navigation_pointer_heght: 3px;
 
 .navigation {
   .navigation-indicator {
-    position: relative;
-    top: -5px;
+    position: absolute;
+    z-index: 1;
+    top: $navigation_links_height - 10px;
+    left: 0;
     height: $navigation_pointer_heght;
     background: $navigation_pointer_color;
     border-radius: $navigation_pointer_radius;

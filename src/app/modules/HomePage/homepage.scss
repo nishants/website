@@ -42,6 +42,7 @@ $search_bar_height: 45px;
         }
 
         .route-view-container {
+          padding-left: 10px;
           width: calc(100% - #{$homepage_side_bar_width});
         }
       }

@@ -1,15 +1,16 @@
 $link_width: 150px;
+$navigation_links_height: 45px;
 
 .navigation {
-  padding: 10px $side_padding;
   @extend .resize-container;
-  background-color: $theme_light_bg;
 
   .profile-info {
     position: relative;
     width: $homepage_side_bar_width;
+    padding-left: $side_padding;
     overflow: hidden;
     float: left;
+    background-color: $theme_light_bg;
 
     .small-profile-image {
       display: block;
@@ -19,7 +20,7 @@ $link_width: 150px;
       @include transformOrigin(0 50%);
       @include transform(
         scale(calc(1 /#{$small_profile_scale}))
-          translateX(-$small_profile_img_width)
+          translateX(-$small_profile_img_width - $side_padding)
       );
     }
     .profile-labels {
@@ -46,11 +47,15 @@ $link_width: 150px;
   }
 
   .navigation-links {
+    position: relative;
     float: left;
     line-height: $navigation_links_height;
     width: calc(100% - #{$homepage_side_bar_width});
 
     > ul {
+      position: relative;
+      z-index: 1;
+      background-color: $theme_light_bg;
       @extend .undo-list;
       @extend .resize-container;
       > li {

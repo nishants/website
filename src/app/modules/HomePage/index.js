@@ -13,7 +13,11 @@ import WorkHistory from './WorkHistory';
 import AboutMe from './AboutMe';
 
 import { searchForKey } from './actions';
-import { scrollToTop, scrolledReached } from '../../shared/util';
+import {
+  scrollToTop,
+  scrolledReached,
+  getScrollPosition
+} from '../../shared/util';
 
 class HomePage extends React.Component {
   state = {
@@ -23,6 +27,7 @@ class HomePage extends React.Component {
   };
 
   componentDidMount() {
+    let lastScrollPositoin = 0;
     const onWindowScroll = () => {
       const profileReached = scrolledReached(
         '#homepage .homepage-content .fixed-to-page .profile-image-container'
@@ -53,8 +58,16 @@ class HomePage extends React.Component {
           ? 'one'
           : '';
       }
+      const scrollPosition = getScrollPosition(),
+        scrollingUp = scrollPosition < lastScrollPositoin;
 
-      this.setState({ profileReached, splashScrollState, stickNavigation });
+      this.setState({
+        profileReached,
+        splashScrollState,
+        stickNavigation,
+        scrollingUp
+      });
+      lastScrollPositoin = scrollPosition;
     };
     this.search(window.location.hash.split('search=')[1] || '');
     this.scrollListener = ScrollListener.$window(onWindowScroll);
@@ -69,7 +82,12 @@ class HomePage extends React.Component {
   search = searchString => this.props.dispatch(searchForKey(searchString));
 
   render() {
-    const { splashScrollState, profileReached, stickNavigation } = this.state;
+    const {
+      splashScrollState,
+      profileReached,
+      stickNavigation,
+      scrollingUp
+    } = this.state;
     const { search } = this;
 
     const {
@@ -83,8 +101,8 @@ class HomePage extends React.Component {
       <article
         id="homepage"
         className={`${profileReached ? 'profile-reached' : ''} ${
-          stickNavigation ? 'stick-navigation' : ''
-        }`}
+          scrollingUp ? 'scrolling-up' : ''
+        } ${stickNavigation ? 'stick-navigation' : ''}`}
       >
         <section className="homepage-splash">
           <Splash splashState={splashScrollState} />

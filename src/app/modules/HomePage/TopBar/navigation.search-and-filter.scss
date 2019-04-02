@@ -1,5 +1,6 @@
 .search-and-filter {
   position: relative;
+  @include transition(transform $transition_time $transition_function);
   input {
     display: block;
     width: 100%;

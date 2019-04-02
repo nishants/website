@@ -80,4 +80,18 @@ $navigation_links_height: 46px;
     }
     @import './navigation.profile-reached';
   }
+
+  .fixed-to-page {
+    .search-and-filter {
+      opacity: 0;
+    }
+  }
+}
+
+#homepage:not(.scrolling-up) {
+  .fixed-to-window {
+    .search-and-filter {
+      @include transform(translateY(calc(-100% - 5px)));
+    }
+  }
 }
