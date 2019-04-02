@@ -12,6 +12,7 @@
         "extensions": [".js", ".jsx"]
       }
     ],
+    "one-var": 0,
     "no-console": 2,
     "react/prop-types": 0,
     "no-nested-ternary": 0,

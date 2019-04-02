@@ -4,20 +4,52 @@ import { connect } from 'react-redux';
 import PortfolioCard from './PortfolioCard';
 import data from '../../../config/PortofolioData.json';
 
+const shouldShowCard = (card, searchString) => {
+  const searchKey = searchString.toLowerCase(),
+    showByTag = card.tags.filter(t =>
+      t.name.toLowerCase().startsWith(searchKey)
+    ).length,
+    showByDescriptoin =
+      card.description.lead.toLowerCase().includes(searchKey) ||
+      card.description.follow.toLowerCase().includes(searchKey),
+    showByTitle = card.name.toLowerCase().includes(searchKey);
+
+  return showByTag || showByDescriptoin || showByTitle;
+};
+
 class Portfolio extends React.PureComponent {
-  componentDidMount() {
-    // console.log(this.props.searchAndFilter);
+  state = { cards: [], lastSearchString: null };
+
+  static getDerivedStateFromProps(
+    {
+      searchAndFilter: { searchString }
+    },
+    { lastSearchString }
+  ) {
+    return lastSearchString === searchString
+      ? null
+      : {
+          searchString,
+          cards: data.map(d => ({
+            ...d,
+            visible: shouldShowCard(d, searchString)
+          }))
+        };
   }
 
   render() {
+    const { cards } = this.state;
+
     return (
       <div id="portfolio-page">
         <ul className="portfolio-deck">
-          {data.map(d => (
-            <li key={d.name}>
-              <PortfolioCard data={d} />
-            </li>
-          ))}
+          {cards.map(d =>
+            d.visible ? (
+              <li key={d.name}>
+                <PortfolioCard data={d} />
+              </li>
+            ) : null
+          )}
           ;
         </ul>
       </div>
