@@ -27,7 +27,7 @@ class HomePage extends React.Component {
   componentDidMount() {
     const onWindowScroll = () => {
       const profileReached = scrolledReached(
-        '#homepage .homepage-content .fixed-to-page .navigation'
+        '#homepage .homepage-content .fixed-to-page .profile-image-container'
       );
       const stickNavigation = scrolledReached(
         '#homepage .homepage-content .fixed-to-page .navigation'

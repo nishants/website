@@ -60,15 +60,14 @@ $navigation_links_height: 46px;
 #homepage.profile-reached {
   #top-bar {
     .profile {
-      img {
-        opacity: 0;
-        @include transform(translateY(-100%));
-      }
+      //img {
+      //  opacity: 0;
+      //  @include transform(translateY(-100%));
+      //}
       .slope-bg {
-        @include transform(rotate(0deg));
+        @include transform(translateY(-40px));
       }
     }
-    @import './navigation.profile-reached';
   }
 }
 
@@ -78,5 +77,6 @@ $navigation_links_height: 46px;
       opacity: 1;
       pointer-events: initial;
     }
+    @import './navigation.profile-reached';
   }
 }
