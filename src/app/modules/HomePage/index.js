@@ -56,6 +56,7 @@ class HomePage extends React.Component {
 
       this.setState({ profileReached, splashScrollState, stickNavigation });
     };
+    this.search(window.location.hash.split('search=')[1] || '');
     this.scrollListener = ScrollListener.$window(onWindowScroll);
   }
 

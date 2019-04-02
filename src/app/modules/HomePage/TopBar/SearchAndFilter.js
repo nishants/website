@@ -30,7 +30,7 @@ class SearchAndFilter extends React.Component {
           <div className="search-and-filter-dropdown">
             <div>
               {tags.map(t => (
-                <span className="tag-link" onClick={() => search(t)}>
+                <span key={t} className="tag-link" onClick={() => search(t)}>
                   #{t}
                 </span>
               ))}

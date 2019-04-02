@@ -1,8 +1,6 @@
 import { all } from 'redux-saga/effects';
-// import authSaga from './app/modules/Auth/AuthSaga';
+import homeSaga from './app/modules/HomePage/sagas';
 
 export default function* rootSaga() {
-  yield all([
-    // authSaga()
-  ]);
+  yield all([homeSaga()]);
 }
