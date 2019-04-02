@@ -1,10 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import PortfolioCard from './PortfolioCard';
 import data from '../../../config/PortofolioData.json';
 
 class Portfolio extends React.PureComponent {
-  componentDidMount() {}
+  componentDidMount() {
+    // console.log(this.props.searchAndFilter);
+  }
 
   render() {
     return (
@@ -22,4 +25,8 @@ class Portfolio extends React.PureComponent {
   }
 }
 
-export default Portfolio;
+const mapStateToProps = ({ home: { searchAndFilter } }) => ({
+  searchAndFilter
+});
+
+export default connect(mapStateToProps)(Portfolio);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Splash from './Splash';
 import ScrollListener from '../../shared/ScrollListener';
@@ -10,6 +11,8 @@ import SideBar from './SideBar';
 import Portfolio from './Portfolio';
 import WorkHistory from './WorkHistory';
 import AboutMe from './AboutMe';
+
+import { searchForKey } from './actions';
 
 const scrolledReached = (selector, offset = 0) =>
   document.querySelector(selector).getClientRects()[0].y <= -offset;
@@ -70,10 +73,14 @@ class HomePage extends React.Component {
       .scrollIntoView({ behavior: 'smooth' });
   };
 
+  search = searchString => this.props.dispatch(searchForKey(searchString));
+
   render() {
     const { splashScrollState, profileReached, stickNavigation } = this.state;
+    const { search } = this;
 
     const {
+      searchAndFilter,
       match: {
         params: { tab_id: selectedNavigationLink }
       }
@@ -107,10 +114,18 @@ class HomePage extends React.Component {
                     <img src={ProfileImg} alt="Nishant Singh" />
                   </div>
                 </div>
-                <Navigation selectedLink={selectedNavigationLink} />
+                <Navigation
+                  selectedLink={selectedNavigationLink}
+                  searchAndFilter={searchAndFilter}
+                  search={search}
+                />
               </div>
               <div className="fixed-to-window">
-                <Navigation selectedLink={selectedNavigationLink} />
+                <Navigation
+                  selectedLink={selectedNavigationLink}
+                  searchAndFilter={searchAndFilter}
+                  search={search}
+                />
               </div>
             </div>
             <section className="tab-view-container">
@@ -131,4 +146,8 @@ class HomePage extends React.Component {
   }
 }
 
-export default withRouter(HomePage);
+const mapStateToProps = ({ home: { searchAndFilter } }) => ({
+  searchAndFilter
+});
+
+export default withRouter(connect(mapStateToProps)(HomePage));

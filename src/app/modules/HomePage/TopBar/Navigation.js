@@ -6,7 +6,7 @@ import ProfileImg from '../profile.jpg';
 
 class Navigation extends React.PureComponent {
   render() {
-    const { selectedLink } = this.props;
+    const { selectedLink, searchAndFilter, search } = this.props;
     return (
       <div className={`navigation ${selectedLink || ''}`}>
         <div className="profile-info">
@@ -36,7 +36,7 @@ class Navigation extends React.PureComponent {
             </li>
           </ul>
           <div className="navigation-indicator" />
-          <SearchAndFilter />
+          <SearchAndFilter searchAndFilter={searchAndFilter} search={search} />
         </div>
       </div>
     );

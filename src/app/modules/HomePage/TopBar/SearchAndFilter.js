@@ -10,6 +10,10 @@ class SearchAndFilter extends React.Component {
   render() {
     const { activated } = this.state;
     const { setActive, setInActive } = this;
+    const {
+      searchAndFilter: { searchString },
+      search
+    } = this.props;
 
     return (
       <>
@@ -18,7 +22,11 @@ class SearchAndFilter extends React.Component {
           onClick={setActive}
           onMouseLeave={setInActive}
         >
-          <input placeholder="search" />
+          <input
+            placeholder="search"
+            value={searchString}
+            onChange={e => search(e.target.value)}
+          />
           <div className="search-and-filter-dropdown">
             <div>
               {' '}
