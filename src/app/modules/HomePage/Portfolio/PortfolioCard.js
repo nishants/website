@@ -1,8 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const PortfolioCard = ({ data: { name, src, demo, tags } }) => (
+const PortfolioCard = ({
+  data: { name, src, demo, tags, image, description }
+}) => (
   <div className="portfolio-card">
     <div className="portfolio-card-title">{name}</div>
+    {image && <img className="portfolio-card-image" src={image} alt={name} />}
+    <p>
+      {description.lead} {description.follow}
+    </p>
 
     <div>
       {demo && (
@@ -25,7 +32,9 @@ const PortfolioCard = ({ data: { name, src, demo, tags } }) => (
     </div>
 
     {tags.map(t => (
-      <span key={t.name}>#{t.name} </span>
+      <Link to={`/portfolio?tags=${t.name}`} key={t.name}>
+        #{t.name}{' '}
+      </Link>
     ))}
   </div>
 );

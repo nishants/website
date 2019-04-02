@@ -1,4 +1,20 @@
+$title_font_size: 23px;
+$descriptoin_font_size: $small_font;
+$card_width: 270px;
+
 .portfolio-card {
   display: block;
   padding: 20px;
+  width: $card_width;
+  text-align: left;
+  border: 1px solid $light_border_color;
+
+  .portfolio-card-title {
+    font-size: $title_font_size;
+    font-weight: $font_weight_bold;
+  }
+  .portfolio-card-image {
+    display: block;
+    width: 100%;
+  }
 }

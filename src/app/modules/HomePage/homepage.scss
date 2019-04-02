@@ -32,6 +32,8 @@ $homepage_side_bar_width: 300px;
       height: 200vh;
       background-color: white;
       .tab-view-container {
+        background-color: white;
+
         @extend .resize-container;
         .side-bar,
         .route-view-container {
