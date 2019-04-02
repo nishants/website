@@ -1,7 +1,12 @@
 .side-bar {
   text-align: left;
+  position: relative;
+  top: -$search_bar_height;
+  left: 0;
   padding-left: $side_padding;
   font-size: $small_font;
+  width: $homepage_side_bar_width;
+  background-color: $theme_light_bg;
 
   > ul {
     @extend .undo-list;

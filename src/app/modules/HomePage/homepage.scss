@@ -2,6 +2,7 @@ $splash_height: 500px;
 $splash_stages: 4;
 
 $homepage_side_bar_width: 300px;
+$search_bar_height: 45px;
 
 #homepage {
   position: relative;
@@ -38,9 +39,6 @@ $homepage_side_bar_width: 300px;
         .side-bar,
         .route-view-container {
           float: left;
-        }
-        .side-bar {
-          width: $homepage_side_bar_width;
         }
 
         .route-view-container {

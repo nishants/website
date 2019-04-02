@@ -119,6 +119,7 @@ class HomePage extends React.Component {
                   searchAndFilter={searchAndFilter}
                   search={search}
                 />
+                <SideBar search={search} />
               </div>
             </div>
             <section className="tab-view-container">

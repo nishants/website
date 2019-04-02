@@ -3,6 +3,7 @@ $link_width: 150px;
 .navigation {
   padding: 10px $side_padding;
   @extend .resize-container;
+  background-color: $theme_light_bg;
 
   .profile-info {
     position: relative;
