@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import PortfolioCard from './PortfolioCard';
 import data from '../../../config/PortofolioData.json';
+import { searchForKey } from '../actions';
+import { scrollToTop } from '../../../shared/util';
 
 const shouldShowCard = (card, searchString) => {
   const searchKey = searchString.toLowerCase(),
@@ -37,8 +39,14 @@ class Portfolio extends React.PureComponent {
         };
   }
 
+  selectTag = searchString => {
+    this.props.dispatch(searchForKey(searchString));
+    scrollToTop();
+  };
+
   render() {
     const { cards } = this.state;
+    const { selectTag } = this;
 
     return (
       <div id="portfolio-page">
@@ -46,7 +54,7 @@ class Portfolio extends React.PureComponent {
           {cards.map(d =>
             d.visible ? (
               <li key={d.name}>
-                <PortfolioCard data={d} />
+                <PortfolioCard data={d} selectTag={selectTag} />
               </li>
             ) : null
           )}

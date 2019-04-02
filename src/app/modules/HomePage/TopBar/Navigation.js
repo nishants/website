@@ -28,6 +28,9 @@ class Navigation extends React.PureComponent {
             <li className="portfolio-link">
               <Link to="/portfolio"> Portfolio </Link>
             </li>
+            <li className="blog-link">
+              <Link to="/blog">Blog</Link>
+            </li>
             <li className="work-history-link">
               <Link to="/work-history"> Work History </Link>
             </li>

@@ -13,9 +13,7 @@ import WorkHistory from './WorkHistory';
 import AboutMe from './AboutMe';
 
 import { searchForKey } from './actions';
-
-const scrolledReached = (selector, offset = 0) =>
-  document.querySelector(selector).getClientRects()[0].y <= -offset;
+import { scrollToTop, scrolledReached } from '../../shared/util';
 
 class HomePage extends React.Component {
   state = {
@@ -63,15 +61,9 @@ class HomePage extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
-      this.onRouteChanged();
+      scrollToTop();
     }
   }
-
-  onRouteChanged = () => {
-    document
-      .querySelector('#homepage .homepage-content .fixed-to-page .navigation')
-      .scrollIntoView({ behavior: 'smooth' });
-  };
 
   search = searchString => this.props.dispatch(searchForKey(searchString));
 
@@ -133,9 +125,10 @@ class HomePage extends React.Component {
               <div className="route-view-container">
                 <Switch>
                   <Route path="/portfolio/" component={Portfolio} />
+                  <Route path="/blog/" component={Portfolio} />
                   <Route path="/work-history" component={WorkHistory} />
                   <Route path="/about-me" component={AboutMe} />
-                  <Redirect from="/" to="/portfolio" />
+                  <Redirect to="/portfolio" />
                 </Switch>
               </div>
             </section>

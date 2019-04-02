@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const PortfolioCard = ({
-  data: { name, src, demo, tags, image, description }
+  data: { name, src, demo, tags, image, description },
+  selectTag
 }) => (
   <div className="portfolio-card">
     <div className="portfolio-card-title">{name}</div>
@@ -32,9 +32,9 @@ const PortfolioCard = ({
     </div>
 
     {tags.map(t => (
-      <Link to={`/portfolio?tags=${t.name}`} key={t.name}>
+      <span className="tag-link" key={t.name} onClick={() => selectTag(t.name)}>
         #{t.name}{' '}
-      </Link>
+      </span>
     ))}
   </div>
 );

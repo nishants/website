@@ -17,4 +17,9 @@ $card_width: 270px;
     display: block;
     width: 100%;
   }
+
+  .tag-link {
+    color: $blue;
+    cursor: pointer;
+  }
 }

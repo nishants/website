@@ -22,12 +22,21 @@ $navigation_pointer_heght: 5px;
   }
 }
 
+.navigation.blog {
+  .blog-link {
+    @extend .selected-link;
+  }
+  .navigation-indicator {
+    @include transform(translateX(100%));
+  }
+}
+
 .navigation.work-history {
   .work-history-link {
     @extend .selected-link;
   }
   .navigation-indicator {
-    @include transform(translateX(100%));
+    @include transform(translateX(200%));
   }
 }
 
@@ -36,6 +45,6 @@ $navigation_pointer_heght: 5px;
     @extend .selected-link;
   }
   .navigation-indicator {
-    @include transform(translateX(200%));
+    @include transform(translateX(300%));
   }
 }
