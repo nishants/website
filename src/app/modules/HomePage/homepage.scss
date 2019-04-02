@@ -1,7 +1,7 @@
 $splash_height: 500px;
 $splash_stages: 4;
 
-$homepage_side_bar_width: 300px;
+$homepage_side_bar_width: 250px;
 $search_bar_height: 45px;
 
 #homepage {
@@ -30,8 +30,6 @@ $search_bar_height: 45px;
     }
 
     .homepage-content {
-      height: 200vh;
-      background-color: white;
       .tab-view-container {
         background-color: white;
 
@@ -42,8 +40,11 @@ $search_bar_height: 45px;
         }
 
         .route-view-container {
-          padding-left: 10px;
+          background-color: $light_white;
           width: calc(100% - #{$homepage_side_bar_width});
+          //border-left: 1px solid $light_border_color;
+          box-shadow: $inside_card_shodow;
+          min-height: 100vh;
         }
       }
     }

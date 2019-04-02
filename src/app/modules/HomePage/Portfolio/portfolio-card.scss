@@ -8,6 +8,7 @@ $card_width: 270px;
   width: $card_width;
   text-align: left;
   border: 1px solid $light_border_color;
+  background-color: $theme_light_bg;
 
   .portfolio-card-title {
     font-size: $title_font_size;

@@ -55,6 +55,10 @@ $navigation_links_height: 46px;
     pointer-events: none;
     background-color: transparent;
     z-index: $top_bar_zindex;
+
+    .search-and-filter {
+      box-shadow: $bar_shadow;
+    }
   }
 }
 

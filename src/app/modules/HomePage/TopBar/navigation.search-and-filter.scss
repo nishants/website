@@ -1,19 +1,24 @@
 .search-and-filter {
   position: relative;
+  background: $theme_dark_color;
+  padding: 10px;
   @include transition(transform $transition_time $transition_function);
   input {
     display: block;
     width: 100%;
     position: relative;
     z-index: 1;
+    background-color: $light_white;
   }
 
   .search-and-filter-dropdown {
     position: absolute;
-    top: 100%;
+    top: calc(100% - 10px);
     left: 0;
     width: 100%;
     text-align: left;
+    padding: 0 10px 10px;
+    background-color: $theme_dark_color;
     > div {
       @include transition($transition);
       background-color: $light_white;

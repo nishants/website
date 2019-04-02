@@ -70,7 +70,8 @@ $navigation_links_height: 45px;
         }
 
         &.selected-link {
-          color: $dark_black_text;
+          background-color: $theme_dark_color;
+          color: $theme_light_bg;
           font-weight: $font_weight_bold;
         }
       }

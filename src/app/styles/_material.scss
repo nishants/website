@@ -5,11 +5,12 @@ $transition_function: ease;
 
 $transition: all $transition_time $transition_function;
 
-$inside_card_shodow: inset 2px 2px 20px 0px rgba(0, 0, 0, 0.75);
+$inside_card_shodow: inset 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
 $input_inset_shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
 $elevated_card_shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
 $elevated_card_inset_shadow: inset 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
-$bar_shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 0 5px 10px 0 rgba(0, 0, 0, 0.12);
+$bar_shadow: 10px 5px 5px 0 rgba(0, 0, 0, 0.16),
+  10px 5px 10px 0 rgba(0, 0, 0, 0.12);
 
 $block_screen_zindex: 99999;
 
