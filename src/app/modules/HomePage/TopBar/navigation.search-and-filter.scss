@@ -1,0 +1,43 @@
+.search-and-filter {
+  position: relative;
+  input {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  .search-and-filter-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    > div {
+      @include transition($transition);
+      background-color: $light_white;
+      padding: 0 10px;
+    }
+  }
+
+  //.search-and-filter-backdrop{
+  //  position: fixed;
+  //  height: 100vh;
+  //  width: 100vw;
+  //  top: 0;
+  //  left: 0;
+  //  background-color: $light_border_color;
+  //}
+
+  &:not(.active) {
+    .search-and-filter-dropdown {
+      pointer-events: none;
+      opacity: 0;
+      @include transform(scale(0));
+      > div {
+        @include transform(translateY(-100%));
+      }
+    }
+    .search-and-filter-backdrop {
+      @include transform(scale(0));
+    }
+  }
+}

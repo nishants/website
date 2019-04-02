@@ -47,6 +47,8 @@ $link_width: 150px;
   .navigation-links {
     float: left;
     line-height: $navigation_links_height;
+    width: calc(100% - #{$homepage_side_bar_width});
+
     > ul {
       @extend .undo-list;
       @extend .resize-container;
@@ -68,6 +70,7 @@ $link_width: 150px;
       }
     }
   }
+  @import 'navigation.search-and-filter';
 }
 
 @import './navigation.pointer';

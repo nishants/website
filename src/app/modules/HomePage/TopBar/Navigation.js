@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import SearchAndFilter from './SearchAndFilter';
 import ProfileImg from '../profile.jpg';
 
 class Navigation extends React.PureComponent {
@@ -35,6 +36,7 @@ class Navigation extends React.PureComponent {
             </li>
           </ul>
           <div className="navigation-indicator" />
+          <SearchAndFilter />
         </div>
       </div>
     );
