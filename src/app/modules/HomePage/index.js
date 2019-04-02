@@ -122,7 +122,7 @@ class HomePage extends React.Component {
               </div>
             </div>
             <section className="tab-view-container">
-              <SideBar />
+              <SideBar search={search} />
               <div className="route-view-container">
                 <Switch>
                   <Route path="/portfolio/" component={Portfolio} />

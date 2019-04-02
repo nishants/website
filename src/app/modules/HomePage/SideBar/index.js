@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SieBar = () => (
+const SieBar = ({ search }) => (
   <div className="side-bar">
     <ul className="demo-links">
-      <li>
-        <Link to="/portfolio/coaching">Technical Coaching</Link>
+      <li onClick={() => search('coaching')}>
+        <Link to="/portfolio">Technical Coaching</Link>
       </li>
-      <li>
-        <Link to="/portfolio/xyz">Interaction Design </Link>
+      <li onClick={() => search('studio')}>
+        <Link to="/portfolio">Interaction Design </Link>
       </li>
-      <li>
-        <Link to="/portfolio/xyz">Visual Design </Link>
+      <li onClick={() => search('design')}>
+        <Link to="/portfolio">Visual Design </Link>
       </li>
-      <li>
-        <Link to="/portfolio/xyz">Frontend Development </Link>
+      <li onClick={() => search('ui')}>
+        <Link to="/portfolio">Frontend Development </Link>
       </li>
-      <li>
-        <Link to="/portfolio/xyz">Test Automation </Link>
+      <li onClick={() => search('testing')}>
+        <Link to="/portfolio">Test Automation </Link>
       </li>
-      <li>
-        <Link to="/portfolio/xyz">Continuous Integration</Link>
+      <li onClick={() => search('ci')}>
+        <Link to="/portfolio">Continuous Integration</Link>
       </li>
     </ul>
 
@@ -46,7 +46,8 @@ const SieBar = () => (
           rel="noopener noreferrer"
           href="https://github.com/nishants"
         >
-          <i className="fab fa-github" />Github
+          <i className="fab fa-github" />
+          Github
         </a>
       </li>
       <li className="stack-overflow">
@@ -56,7 +57,8 @@ const SieBar = () => (
           rel="noopener noreferrer"
           href="http://stackoverflow.com/users/1065020/dawn"
         >
-          <i className="fab fa-stack-overflow" />StackOveflow
+          <i className="fab fa-stack-overflow" />
+          StackOveflow
         </a>
       </li>
       <li className="twitter">
@@ -66,7 +68,8 @@ const SieBar = () => (
           rel="noopener noreferrer"
           href="https://twitter.com/nshnt_sng"
         >
-          <i className="fab fa-twitter" />Twitter
+          <i className="fab fa-twitter" />
+          Twitter
         </a>
       </li>
       <li className="linkedin">
@@ -76,7 +79,8 @@ const SieBar = () => (
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/nishant-singh-b2420946"
         >
-          <i className="fab fa-linkedin" />Linkedin
+          <i className="fab fa-linkedin" />
+          Linkedin
         </a>
       </li>
     </ul>
