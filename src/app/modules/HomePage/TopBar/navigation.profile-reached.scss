@@ -8,3 +8,8 @@
     }
   }
 }
+.profile-image-container {
+  img {
+    @include transform(translateX(calc(-100% - #{$side_padding + 10px})));
+  }
+}

@@ -31,6 +31,7 @@ $navigation_links_height: 46px;
       height: $profile_full_image_height;
       width: 150%;
       background-color: white;
+      box-shadow: $slope_inside_shadow;
       @include transformOrigin(0 0);
       @include transform(rotate(2deg));
       @include transition($transition);
@@ -71,8 +72,10 @@ $navigation_links_height: 46px;
       //}
       .slope-bg {
         @include transform(translateY(-40px));
+        background-color: $grey;
       }
     }
+    @import './navigation.profile-reached';
   }
 }
 
@@ -82,7 +85,6 @@ $navigation_links_height: 46px;
       opacity: 1;
       pointer-events: initial;
     }
-    @import './navigation.profile-reached';
   }
 
   .fixed-to-page {
