@@ -105,6 +105,10 @@ $navigation_links_height: 46px;
       opacity: 0;
     }
   }
+
+  .route-view-container {
+    @include transform(translateY(-45px));
+  }
 }
 
 #homepage:not(.scrolling-up) {

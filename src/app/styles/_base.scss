@@ -92,3 +92,18 @@ ul.undo-list {
     -webkit-box-shadow: 0 0 1px $button_color;
   }
 }
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}

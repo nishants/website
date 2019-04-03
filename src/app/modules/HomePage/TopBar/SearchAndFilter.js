@@ -22,11 +22,14 @@ class SearchAndFilter extends React.Component {
           onClick={setActive}
           onMouseLeave={setInActive}
         >
-          <input
-            placeholder="search"
-            value={searchString}
-            onChange={e => search(e.target.value)}
-          />
+          <div className="search-and-filter-input">
+            <i className="search-icon fas fa-search" />
+            <input
+              placeholder="search"
+              value={searchString}
+              onChange={e => search(e.target.value)}
+            />
+          </div>
           <div className="search-and-filter-dropdown">
             <div>
               {tags.map(t => (
