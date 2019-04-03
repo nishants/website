@@ -12,7 +12,7 @@ $search_input_offset: 5px;
     z-index: 1;
     overflow: hidden;
     background-color: $light_white;
-    border-radius: 5px;
+    border-radius: $default_border_radius;
 
     .search-icon {
       position: absolute;

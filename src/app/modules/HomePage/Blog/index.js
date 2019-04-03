@@ -2,7 +2,7 @@ import React from 'react';
 
 import SearchTab from '../SearchTab';
 
-import PortfolioCard from './PortfolioCard';
+import PortfolioCard from '../Portfolio/PortfolioCard';
 import data from '../../../config/PortofolioData.json';
 
 const shouldShowCard = (card, searchString) => {
@@ -18,8 +18,8 @@ const shouldShowCard = (card, searchString) => {
   return showByTag || showByDescriptoin || showByTitle;
 };
 
-const Portfolio = () => (
-  <div id="portfolio-page">
+const Blog = () => (
+  <div id="blog-page">
     <SearchTab
       data={data}
       CardComponent={PortfolioCard}
@@ -28,4 +28,4 @@ const Portfolio = () => (
   </div>
 );
 
-export default Portfolio;
+export default Blog;

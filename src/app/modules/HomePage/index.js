@@ -9,6 +9,7 @@ import Navigation from './TopBar/Navigation';
 
 import SideBar from './SideBar';
 import Portfolio from './Portfolio';
+import Blog from './Blog';
 import WorkHistory from './WorkHistory';
 import AboutMe from './AboutMe';
 
@@ -148,7 +149,7 @@ class HomePage extends React.Component {
               <div className="route-view-container">
                 <Switch>
                   <Route path="/portfolio/" component={Portfolio} />
-                  <Route path="/blog/" component={Portfolio} />
+                  <Route path="/blog/" component={Blog} />
                   <Route path="/work-history" component={WorkHistory} />
                   <Route path="/about-me" component={AboutMe} />
                   <Redirect to="/portfolio" />
