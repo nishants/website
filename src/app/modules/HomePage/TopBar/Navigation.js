@@ -38,7 +38,7 @@ class Navigation extends React.PureComponent {
               <Link to="/about-me"> About Me </Link>
             </li>
           </ul>
-          <div className="navigation-indicator" />
+          {/* <div className="navigation-indicator" /> */}
           <SearchAndFilter searchAndFilter={searchAndFilter} search={search} />
         </div>
       </div>

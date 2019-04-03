@@ -1,9 +1,9 @@
 .side-bar {
   text-align: left;
   position: relative;
-  top: -$search_bar_height;
+  top: -$search_bar_height - 10px;
   left: 0;
-  padding-top: 10px;
+  //padding-top: 10px;
   padding-left: $side_padding;
   font-size: $small_font;
   width: $homepage_side_bar_width;

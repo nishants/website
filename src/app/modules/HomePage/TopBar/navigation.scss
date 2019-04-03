@@ -11,6 +11,7 @@ $navigation_links_height: 45px;
     overflow: hidden;
     float: left;
     background-color: $theme_light_bg;
+    padding-bottom: 30px;
 
     .small-profile-image {
       display: block;
@@ -24,6 +25,7 @@ $navigation_links_height: 45px;
       );
     }
     .profile-labels {
+      width: calc(100% - #{$small_profile_img_width});
       @include transition($transition);
       @include transformOrigin(0 0);
       @include transform(translateX(-$small_profile_img_width));
@@ -41,7 +43,7 @@ $navigation_links_height: 45px;
       }
 
       .profile-title {
-        font-size: $small_font;
+        font-size: $very_small_font;
       }
     }
   }
@@ -73,6 +75,7 @@ $navigation_links_height: 45px;
           background-color: $theme_dark_color;
           color: $theme_light_bg;
           font-weight: $font_weight_bold;
+          box-shadow: $tab_button_shadow;
         }
       }
     }
