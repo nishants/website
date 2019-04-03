@@ -121,6 +121,9 @@ class HomePage extends React.Component {
               <div className="profile-bar fixed-to-page">
                 <div className="profile">
                   <div className="slope-bg" />
+                  <span className="work-credits">
+                    Designed and Developed by Nishant Singh.
+                  </span>
                   <div className="profile-image-container">
                     <img src={ProfileImg} alt="Nishant Singh" />
                   </div>

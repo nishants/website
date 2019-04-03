@@ -61,6 +61,19 @@ $navigation_links_height: 46px;
       box-shadow: $bar_shadow;
     }
   }
+  .work-credits {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: fixed;
+    padding: 10px;
+    font-weight: $font_weight_bold;
+    color: $light_black_text;
+    opacity: 0;
+    pointer-events: none;
+    @include transition(opacity $transition_time $transition_function);
+  }
 }
 
 #homepage.profile-reached {
