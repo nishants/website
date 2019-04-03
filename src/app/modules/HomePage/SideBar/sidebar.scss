@@ -1,7 +1,9 @@
+$side_bar_top_position: $search_bar_height + 10px;
+
 .side-bar {
   text-align: left;
   position: relative;
-  top: -$search_bar_height - 10px;
+  top: -$side_bar_top_position;
   left: 0;
   //padding-top: 10px;
   padding-left: $side_padding;
@@ -58,5 +60,12 @@
       color: inherit;
       text-decoration: none;
     }
+  }
+}
+
+.fixed-to-window {
+  .side-bar {
+    position: absolute;
+    top: $side_bar_top_position;
   }
 }
