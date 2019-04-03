@@ -2,27 +2,24 @@ import React from 'react';
 
 import SearchTab from '../SearchTab';
 
-import PortfolioCard from '../Portfolio/PortfolioCard';
-import data from '../../../config/PortofolioData.json';
+import BlogCard from './BlogCard';
+import data from '../../../config/BlogData.json';
 
 const shouldShowCard = (card, searchString) => {
   const searchKey = searchString.toLowerCase(),
     showByTag = card.tags.filter(t =>
       t.name.toLowerCase().startsWith(searchKey)
     ).length,
-    showByDescriptoin =
-      card.description.lead.toLowerCase().includes(searchKey) ||
-      card.description.follow.toLowerCase().includes(searchKey),
-    showByTitle = card.name.toLowerCase().includes(searchKey);
+    showByHeading = card.heading.toLowerCase().includes(searchKey);
 
-  return showByTag || showByDescriptoin || showByTitle;
+  return showByTag || showByHeading;
 };
 
 const Blog = () => (
   <div id="blog-page">
     <SearchTab
       data={data}
-      CardComponent={PortfolioCard}
+      CardComponent={BlogCard}
       shouldShowCard={shouldShowCard}
     />
   </div>
