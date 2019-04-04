@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { searchForKey, setTags } from '../actions';
 import { scrollToTop } from '../../../shared/util';
+import VerticalDeck from '../../../shared/VerticalDeck';
 
 class SearchTab extends React.PureComponent {
   state = { cards: [], lastSearchString: null };
@@ -50,24 +51,23 @@ class SearchTab extends React.PureComponent {
     const { selectTag } = this;
     const noneVisible = !cards.find(c => c.visible);
 
+    const items = cards.map(d => ({id: (d.name || d.company), Component: <CardComponent data={d} selectTag={selectTag}/>}));
+    const orderBy = (a, b) => a.id > b.id;
+
     return (
-      <>
-        <ul className="search-tab-items">
-          {cards.map(d =>
-            d.visible ? (
-              <li key={`${d.company}-${d.name}`}>
-                <CardComponent data={d} selectTag={selectTag} />
-              </li>
-            ) : null
-          )}
-        </ul>
+      <div className='search-tab-items'>
+
+        <VerticalDeck layout={{item: {width: "100%"}}} items={items} orderBy={orderBy}>
+
+        </VerticalDeck>
+
         {noneVisible && (
           <span className="no-results-message">
             {' '}
             No results for {`"${searchString}"`}{' '}
           </span>
         )}
-      </>
+      </div>
     );
   }
 }
