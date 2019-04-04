@@ -1,12 +1,13 @@
 #portfolio-page {
+  padding-left: 10px;
   ul.search-tab-items {
     @extend .undo-list;
-    @extend .resize-container;
+    //@extend .resize-container;
 
-    > li {
-      float: left;
-      margin: 10px;
-    }
+    //> li {
+    //  float: left;
+    //  margin: 10px;
+    //}
   }
 }
 @import 'portfolio-card';
