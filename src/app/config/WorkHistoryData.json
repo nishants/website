@@ -21,7 +21,7 @@
     "fromDate": "Feb 2016",
     "toDate": "March 2018",
     "location": "Bengaluru Area, India",
-    "description": "<ul><li>Coached client's teams on Acceptance Test Driven Development.</li>Worked independently with client, aligning the onsite/offsite stakeholders and evangelizing ATDD.<li></li><li>Created transition backlogs for team, facilitated incremental transformation to workflows , helped establish testing strategy, prepared architecture for test automation, mentored BA's on writing story intent in gherkin language, paired up with automation engineers to teach test automation with ruby. See less</li></ul>",
+    "description": "<ul><li>Coached client's teams on Acceptance Test Driven Development.</li>Worked independently with client, aligning the onsite/offsite stakeholders and evangelizing ATDD.</li><li>Created transition backlogs for team, facilitated incremental transformation to workflows , helped establish testing strategy, prepared architecture for test automation, mentored BA's on writing story intent in gherkin language, paired up with automation engineers to teach test automation with ruby. See less</li></ul>",
     "image": "images/work-history-items/agility.png",
     "tags": [
       { "name": "java" },

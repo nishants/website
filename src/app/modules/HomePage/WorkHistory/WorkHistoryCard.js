@@ -14,26 +14,26 @@ const WorkHistoryCard = ({
   selectTag
 }) => (
   <div className="work-history-card">
-    <div className="work-history-card-title">{position}</div>
-    <label>{company}</label>
-    {image && (
-      <img className="work-history-card-image" src={image} alt={position} />
-    )}
-    <p>{company}</p>
-
-    <label>
-      {fromDate} - {toDate}
-    </label>
-    <label>{location}</label>
-    <p>{description}</p>
-
-    <ul className="tag-links">
-      {tags.map(t => (
-        <li key={t.name} onClick={() => selectTag(t.name)}>
-          #{t.name}{' '}
-        </li>
-      ))}
-    </ul>
+    <img className="work-history-card-image" src={image} alt={position} />
+    <div className="work-history-details">
+      <div className="work-history-position">{position}</div>
+      <label className="work-history-company">{company}</label>
+      <label className="work-history-period">
+        {fromDate} - {toDate}
+      </label>
+      <label className="work-history-location">{location}</label>
+      <div
+        className="work-history-description"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
+      <ul className="tags">
+        {tags.map(t => (
+          <li key={t.name} onClick={() => selectTag(t.name)}>
+            #{t.name}{' '}
+          </li>
+        ))}
+      </ul>
+    </div>
   </div>
 );
 

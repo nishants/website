@@ -26,6 +26,6 @@ const throttled = callback => {
   };
 };
 
-window.addEventListener('scroll', throttled(processScrollEvent));
+window.addEventListener('scroll', throttled(processScrollEvent), false);
 
 export default ScrollListener;

@@ -1,5 +1,6 @@
 $title_font_size: 23px;
 $descriptoin_font_size: $small_font;
+$work_card_image_width: 70px;
 $card_width: 100%;
 
 .work-history-card {
@@ -9,31 +10,51 @@ $card_width: 100%;
   text-align: left;
   border: 1px solid $light_border_color;
   background-color: $theme_light_bg;
+  @extend .resize-container;
 
-  .work-history-card-title {
-    font-size: $title_font_size;
-    font-weight: $font_weight_bold;
-  }
   .work-history-card-image {
     display: block;
-    width: 100%;
+    width: $work_card_image_width;
+    float: left;
   }
+  .work-history-details {
+    float: left;
+    width: calc(100% - #{$work_card_image_width});
+    padding-left: 20px;
 
-  .work-history-external-link {
-    display: block;
-    i {
-      margin-right: 5px;
+    .work-history-position {
+      font-size: $title_font_size;
+      font-weight: $font_weight_bold;
     }
-  }
 
-  ul.tag-links {
-    @extend .undo-list;
-    text-align: right;
-    > li {
-      display: inline-block;
-      color: $blue;
-      cursor: pointer;
-      margin-left: 5px;
+    .work-history-company {
+      font-size: $medium_font_size;
+      display: block;
+    }
+
+    .work-history-period,
+    .work-history-location {
+      display: block;
+      font-size: $small_font;
+      color: $light_black_text;
+    }
+
+    .work-history-description {
+      padding-top: 10px;
+      ul {
+        padding-left: 20px;
+        list-style-type: disc;
+      }
+    }
+    ul.tags {
+      @extend .undo-list;
+      text-align: right;
+      > li {
+        display: inline-block;
+        color: $blue;
+        cursor: pointer;
+        margin-left: 5px;
+      }
     }
   }
 }

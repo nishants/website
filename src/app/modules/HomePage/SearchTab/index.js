@@ -55,7 +55,7 @@ class SearchTab extends React.PureComponent {
         <ul className="search-tab-items">
           {cards.map(d =>
             d.visible ? (
-              <li key={d.name}>
+              <li key={`${d.company}-${d.name}`}>
                 <CardComponent data={d} selectTag={selectTag} />
               </li>
             ) : null
