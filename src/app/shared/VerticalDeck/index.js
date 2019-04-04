@@ -29,13 +29,23 @@ const computeLayout = ({
     container.offsetWidth / (rowWidth + itemRightMargin)
   );
 
-  let row = 0,
-    lastYPositions = [];
+  let  lastYPositions = [];
   const sortedItems = items.sort(sortBy);
 
   for (let i = 0; i < totalRows; i++) lastYPositions.push(0);
 
+  const getNextRow = () => {
+    let nextRow = 0;
+    for (let i = 0; i < lastYPositions.length; i++) {
+      if(lastYPositions[i] < lastYPositions[nextRow]){
+        nextRow = i;
+      }
+    }
+    return nextRow;
+  };
+
   for (let i = 0; i < sortedItems.length; i++) {
+    const row = getNextRow();
     const left = row * rowWidth + row * itemRightMargin;
     const top = lastYPositions[row];
     const item = sortedItems[i];

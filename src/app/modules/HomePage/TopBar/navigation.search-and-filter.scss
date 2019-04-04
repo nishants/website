@@ -6,7 +6,7 @@ $search_input_offset: 5px;
   position: relative;
   background: $theme_dark_color;
   padding: 10px;
-  @include transition(transform $transition_time $transition_function);
+  @include transition(#{transform $transition_time $transition_function, opacity $transition_time $transition_function});
   .search-and-filter-input {
     position: relative;
     z-index: 1;
