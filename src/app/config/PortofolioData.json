@@ -1,6 +1,56 @@
 [
   {
     "type": "ui",
+    "name": "Jeyson : a JSON template engine",
+    "src": "public/pages/jeyson",
+    "image": "images/portfolio-items/jeyson.png",
+    "tags": [
+      {
+        "name": "development"
+      }
+    ],
+    "description": {
+      "lead": "Jeyson",
+      "follow": " allows executing expressions in json, include another json, render a list element ,render values conditionally, inbuilt and custom directives. Any json is a syntatically valid template, and any template is syntatically valida json. allows executing expressions in json, include another json, render a list element ,render values conditionally, inbuilt and custom directives. Any json is a syntatically valid template, and any template is syntatically valida json."
+    }
+  },
+  {
+    "type": "ui",
+    "name": "LookLike Matchers",
+    "no-mobile": "true",
+    "src": "public/pages/look_like",
+    "image": "images/portfolio-items/look_like_git.png",
+    "tags": [
+      {
+        "name": "development"
+      }
+    ],
+    "description": {
+      "lead": "A collection of Rspec matchers, for writing wireframe tests.",
+      "follow": "Useful for writting data independent tests based on visual pattern matching."
+    }
+  },
+  {
+    "type": "ui",
+    "name": "Authenticating Users on Blockchains",
+    "image": "images/portfolio-items/scatterjs.jpeg",
+    "src": "https://github.com/nishants/scatterjs-react",
+    "tags": [
+      {
+        "name": "development"
+      },
+      {
+        "name": "blockchain"
+      }
+    ],
+    "desktop-first": true,
+    "description": {
+      "lead": "Comparing ScatterJS with OAuth flow and ",
+      "follow": "impletmenting auth for EOS blockchain with React, Redux and Saga"
+    }
+  },
+  {
+    "type": "ui",
     "name": "Gaming Experience with Alien Theme",
     "image": "images/portfolio-items/start-wars.gif",
     "src": "http://nishants.site/lab/star-wars/",
@@ -23,6 +73,7 @@
     "name": "LookLike Playground",
     "no-mobile": "true",
     "src": "http://amoeba.social/lab/look-like/",
+    "image": "images/portfolio-items/look_like.png",
     "tags": [
       {
         "name": "design"
@@ -38,6 +89,7 @@
     "name": "Chakra",
     "no-mobile": "true",
     "src": "https://boiling-scrubland-7787.herokuapp.com/",
+    "image": "images/portfolio-items/chakra.png",
     "tags": [
       {
         "name": "design"
@@ -68,35 +120,6 @@
   },
   {
     "type": "ui",
-    "name": "Jeyson",
-    "src": "public/pages/jeyson",
-    "tags": [
-      {
-        "name": "development"
-      }
-    ],
-    "description": {
-      "lead": "A JSON Template Language",
-      "follow": " allows executing expressions in json, include another json, render a list element ,render values conditionally, inbuilt and custom directives. Any json is a syntatically valid template, and any template is syntatically valida json. allows executing expressions in json, include another json, render a list element ,render values conditionally, inbuilt and custom directives. Any json is a syntatically valid template, and any template is syntatically valida json."
-    }
-  },
-  {
-    "type": "ui",
-    "name": "LookLike Matchers",
-    "no-mobile": "true",
-    "src": "public/pages/look_like",
-    "tags": [
-      {
-        "name": "development"
-      }
-    ],
-    "description": {
-      "lead": "A collection of Rspec matchers, for writing wireframe tests.",
-      "follow": "Useful for writting data independent tests based on visual pattern matching."
-    }
-  },
-  {
-    "type": "ui",
     "name": "Toggles",
     "no-mobile": "true",
     "src": "public/pages/toggles",
@@ -114,6 +137,7 @@
     "type": "ui",
     "name": "360 deg Panorama View",
     "src": "http://amoeba.social/dump/lab/scroll-magic.html",
+    "image": "images/portfolio-items/panorama.gif",
     "tags": [
       {
         "name": "coaching"
@@ -170,6 +194,7 @@
     "type": "ui",
     "name": "Topbar with Search",
     "src": "http://amoeba.social/dump/concepts/treniq/",
+    "image": "images/portfolio-items/treniq.gif",
     "no-mobile": "true",
     "tags": [
       {

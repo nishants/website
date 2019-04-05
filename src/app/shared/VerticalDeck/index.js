@@ -15,15 +15,17 @@ const creatGridItem = e => ({
   },
   setPosition: (top, left) => {
     e.style.transform = `translateX(${left}px) translateY(${top}px)`;
+    e.style['pointer-events'] = 'all';
   },
   hasClass: name => e.classList.contains(name),
   hide: () => {
     e.style.transform = `translateY(100vh)`;
-    e.style.opacity = `0`;
+    e.style.opacity = '0';
+    e.style['pointer-events'] = 'none';
   }
 });
 
-const itemInitialStyle = { position: 'absolute', top: 0, left: 0, opacity: 0 };
+const itemInitialStyle = { position: 'absolute', top: 0, left: 0, opacity: 0, transform: "translateY(100vh)" };
 
 const isPercentage = value =>
   typeof value === 'string' && !!value.match(/^[\d]*%$/);
