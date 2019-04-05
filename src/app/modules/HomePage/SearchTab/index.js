@@ -45,21 +45,23 @@ class SearchTab extends React.PureComponent {
   render() {
     const { cards } = this.state;
     const {
+      layout,
       CardComponent,
       searchAndFilter: { searchString }
     } = this.props;
     const { selectTag } = this;
     const noneVisible = !cards.find(c => c.visible);
 
-    const items = cards.map(d => ({id: (d.name || d.company), Component: <CardComponent data={d} selectTag={selectTag}/>}));
+    const items = cards.map(d => ({
+      id: d.name || d.company,
+      visible: d.visible,
+      Component: <CardComponent data={d} selectTag={selectTag} />
+    }));
     const orderBy = (a, b) => a.id > b.id;
 
     return (
-      <div className='search-tab-items'>
-
-        <VerticalDeck layout={{item: {width: "100%"}}} items={items} orderBy={orderBy}>
-
-        </VerticalDeck>
+      <div className="search-tab-items">
+        <VerticalDeck layout={layout} items={items} orderBy={orderBy} />
 
         {noneVisible && (
           <span className="no-results-message">
