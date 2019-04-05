@@ -19,6 +19,9 @@ const SieBar = ({ search }) => (
       <li onClick={() => search('tdd')}>
         <Link to="/portfolio">Test Driven Development</Link>
       </li>
+      <li onClick={() => search('frontend')}>
+        <Link to="/portfolio">Frontend Development</Link>
+      </li>
       <li onClick={() => search('design')}>
         <Link to="/portfolio">Designs</Link>
       </li>

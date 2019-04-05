@@ -177,6 +177,35 @@
     }
   },
   {
+    "name": "JHashTable: Java TDD Workshop for Beginners",
+    "src": "https://github.com/nishants/JHashTable",
+    "image": "images/portfolio-items/jhashtable.png",
+    "tags": [
+      {
+        "name": "coaching"
+      },
+      {
+        "name": "tdd"
+      },
+      {
+        "name": "java"
+      },
+      {
+        "name": "agile"
+      },
+      {
+        "name": "backend"
+      },
+      {
+        "name": "coaching"
+      }
+    ],
+    "description": {
+      "lead": "Learning TDD by developing a hash table in Java.",
+      "follow": ""
+    }
+  },
+  {
     "name": "Extab : Advanced Java TDD Workshop",
     "src": "https://github.com/nishants/extab",
     "image": "images/portfolio-items/extab.png",
@@ -342,7 +371,7 @@
   {
     "name": "Interactive Theme Design for Edtech Startup",
     "image": "images/portfolio-items/zinc-imagine.gif",
-    "src": "http://nishants.site/lab/star-wars/",
+    "src": "http://nishants.site/zinc/re-imagine",
     "tags": [
       {
         "name": "design"
@@ -600,7 +629,7 @@
     "src": "http://amoeba.social/dump/lab/xsaas",
     "tags": [
       {
-        "name": "fontend"
+        "name": "frontend"
       },
       {
         "name": "design"
@@ -616,7 +645,7 @@
     "src": "http://amoeba.social/dump/concepts/tetris-scroll",
     "tags": [
       {
-        "name": "fontend"
+        "name": "frontend"
       },
       {
         "name": "design"
@@ -659,7 +688,7 @@
     "src": "http://amoeba.social/dump/tiktik2",
     "tags": [
       {
-        "name": "fontend"
+        "name": "frontend"
       },
       {
         "name": "design"
@@ -688,7 +717,7 @@
     "src": "http://amoeba.social/dump/concepts/mobile-shutter-menu/index.html",
     "tags": [
       {
-        "name": "fontend"
+        "name": "frontend"
       },
       {
         "name": "design"
@@ -704,7 +733,7 @@
     "src": "http://amoeba.social/dump/rob-the-robe",
     "tags": [
       {
-        "name": "fontend"
+        "name": "frontend"
       },
       {
         "name": "design"
@@ -721,7 +750,7 @@
     "image": "images/portfolio-items/legal-app.gif",
     "tags": [
       {
-        "name": "fontend"
+        "name": "frontend"
       },
       {
         "name": "design"
@@ -737,7 +766,7 @@
     "src": "http://amoeba.social/dump/client-demo/treniq",
     "tags": [
       {
-        "name": "fontend"
+        "name": "frontend"
       },
       {
         "name": "design"
@@ -753,7 +782,7 @@
     "src": "http://amoeba.social/dump/lab/accordian",
     "tags": [
       {
-        "name": "fontend"
+        "name": "frontend"
       },
       {
         "name": "design"
@@ -769,7 +798,7 @@
     "src": "http://amoeba.social/dump/lab/blinking-owls",
     "tags": [
       {
-        "name": "fontend"
+        "name": "frontend"
       },
       {
         "name": "design"
