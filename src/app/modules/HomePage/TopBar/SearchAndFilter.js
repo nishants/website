@@ -37,6 +37,14 @@ class SearchAndFilter extends React.Component {
                   #{t}
                 </span>
               ))}
+              {searchString && searchString.length && (
+                <div
+                  onClick={() => search('')}
+                  className="clear-search-and-filter"
+                >
+                  Clear Search
+                </div>
+              )}
             </div>
           </div>
         </div>

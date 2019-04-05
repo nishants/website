@@ -5,22 +5,22 @@ const SieBar = ({ search }) => (
   <div className="side-bar">
     <ul className="demo-links">
       <li onClick={() => search('coaching')}>
-        <Link to="/portfolio">Technical Coaching</Link>
+        <Link to="/portfolio">Coaching/Consulting</Link>
       </li>
-      <li onClick={() => search('studio')}>
-        <Link to="/portfolio">Interaction Design </Link>
+      <li onClick={() => search('development')}>
+        <Link to="/portfolio">Fullstack Development</Link>
       </li>
-      <li onClick={() => search('design')}>
-        <Link to="/portfolio">Visual Design </Link>
-      </li>
-      <li onClick={() => search('ui')}>
-        <Link to="/portfolio">Frontend Development </Link>
+      <li onClick={() => search('open-source')}>
+        <Link to="/portfolio">Open Source</Link>
       </li>
       <li onClick={() => search('testing')}>
         <Link to="/portfolio">Test Automation </Link>
       </li>
-      <li onClick={() => search('ci')}>
-        <Link to="/portfolio">Continuous Integration</Link>
+      <li onClick={() => search('tdd')}>
+        <Link to="/portfolio">Test Driven Development</Link>
+      </li>
+      <li onClick={() => search('design')}>
+        <Link to="/portfolio">Designs</Link>
       </li>
     </ul>
 

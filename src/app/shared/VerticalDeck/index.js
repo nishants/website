@@ -11,11 +11,12 @@ const creatGridItem = e => ({
     e.style.transform = `translateX(-${e.offsetLeft}px) translateY(-${
       e.offsetTop
     }px)`;
-    console.log('resetting item ', e);
   },
-  setPosition: (top, left) => {
+  showItem: (top, left, width) => {
     e.style.transform = `translateX(${left}px) translateY(${top}px)`;
     e.style['pointer-events'] = 'all';
+    e.style.opacity = 1;
+    e.style.width = `${width}px`;
   },
   hasClass: name => e.classList.contains(name),
   hide: () => {
@@ -25,7 +26,13 @@ const creatGridItem = e => ({
   }
 });
 
-const itemInitialStyle = { position: 'absolute', top: 0, left: 0, opacity: 0, transform: "translateY(100vh)" };
+const itemInitialStyle = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  opacity: 0,
+  transform: 'translateY(100vh)'
+};
 
 const isPercentage = value =>
   typeof value === 'string' && !!value.match(/^[\d]*%$/);
@@ -37,7 +44,9 @@ const valueAsPixel = ({ widthValue, containerWidth }) =>
 
 const getNaturalWidth = ({ widthValue, containerWidth, firstElement }) => {
   return !widthValue
-    ? (firstElement ? firstElement.offsetWidth : 0)
+    ? firstElement
+      ? firstElement.offsetWidth
+      : 0
     : valueAsPixel({ widthValue, containerWidth });
 };
 
@@ -70,24 +79,24 @@ const computeLayout = ({
       ? maxWidth
       : suggesstedWidth;
 
-  console.log({
-    actualWidth,
-    rowsCount,
-    suggesstedWidth,
-    voidWidth,
-    maxWidth,
-    naturalWidth,
-    containerWidth
-  });
+  // console.log({
+  //   actualWidth,
+  //   rowsCount,
+  //   suggesstedWidth,
+  //   voidWidth,
+  //   maxWidth,
+  //   naturalWidth,
+  //   containerWidth
+  // });
 
   const lastYPositions = [];
   const sortedItems = items.sort(sortBy);
 
-  for (let i = 0; i < rowsCount; i++) lastYPositions.push(0);
+  for (let i = 0; i < rowsCount; i += 1) lastYPositions.push(0);
 
   const getNextRow = () => {
     let nextRow = 0;
-    for (let i = 0; i < lastYPositions.length; i++) {
+    for (let i = 0; i < lastYPositions.length; i += 1) {
       if (lastYPositions[i] < lastYPositions[nextRow]) {
         nextRow = i;
       }
@@ -95,18 +104,17 @@ const computeLayout = ({
     return nextRow;
   };
 
-  for (let i = 0; i < sortedItems.length; i++) {
+  for (let i = 0; i < sortedItems.length; i += 1) {
     const row = getNextRow();
     const left = row * actualWidth;
     const top = lastYPositions[row];
     const item = sortedItems[i];
-    if (!item.hasClass('visible')) {
+    if (item.hasClass('visible')) {
+      positions.push({ item, left, top });
+      lastYPositions[row] += item.getHeight();
+    } else {
       item.hide();
-      continue;
     }
-    positions.push({ item, left, top });
-
-    lastYPositions[row] = lastYPositions[row] + item.getHeight();
   }
 
   return {
@@ -145,7 +153,7 @@ class VerticalDeck extends React.PureComponent {
     window.removeEventListener('resize', this.updateLayout);
   }
 
-  updateLayout = e => {
+  updateLayout = () => {
     const computedLayout = computeLayout({
       container: this.gridElement.current,
       items: this.state.gridItems,
@@ -156,12 +164,9 @@ class VerticalDeck extends React.PureComponent {
     this.gridElement.current.style.height = `${
       computedLayout.containerHeight
     }px`;
-    window.computedLayout = computedLayout;
 
     computedLayout.positions.forEach(p => {
-      p.item.setPosition(p.top, p.left);
-      p.item._e.style.opacity = 1;
-      p.item.setWidth(computedLayout.rowWidth);
+      p.item.showItem(p.top, p.left, computedLayout.rowWidth);
     });
   };
 

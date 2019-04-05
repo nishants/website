@@ -6,7 +6,10 @@ $search_input_offset: 5px;
   position: relative;
   background: $theme_dark_color;
   padding: 10px;
-  @include transition(#{transform $transition_time $transition_function, opacity $transition_time $transition_function});
+  @include transition(
+    #{transform $transition_time $transition_function,
+    opacity $transition_time $transition_function}
+  );
   .search-and-filter-input {
     position: relative;
     z-index: 1;
@@ -60,23 +63,32 @@ $search_input_offset: 5px;
 
   .search-and-filter-dropdown {
     position: absolute;
+    z-index: $top_bar_zindex;
     top: calc(100% - 10px);
     left: $search_icon_width + 10px;
     width: calc(100% - #{$search_icon_width + 20px});
     text-align: left;
-    //padding: 0 10px 10px;
-    //background-color: $theme_dark_color;
+    color: $blue;
     box-shadow: $drop_down_shadow;
     border-top: 1px solid $light_grey_border_color;
+    line-height: 20px;
     > div {
       @include transition($transition);
       background-color: $grey;
       padding: 0 10px;
+      padding-bottom: 10px;
     }
     .tag-link {
-      color: $blue;
-      cursor: pointer;
       margin-right: 5px;
+      cursor: pointer;
+    }
+
+    .clear-search-and-filter {
+      cursor: pointer;
+      text-align: center;
+      border: 1px solid;
+      height: 40px;
+      line-height: 40px;
     }
   }
 

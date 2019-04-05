@@ -8,7 +8,8 @@ const PortfolioCard = ({
     <div className="portfolio-card-title">{name}</div>
     {image && <img className="portfolio-card-image" src={image} alt={name} />}
     <p>
-      {description.lead} {description.follow}
+      <span className="portfolio-car-desc-lead">{description.lead}</span>{' '}
+      {description.follow}
     </p>
 
     <div>
@@ -31,11 +32,17 @@ const PortfolioCard = ({
       )}
     </div>
 
-    {tags.map(t => (
-      <span className="tag-link" key={t.name} onClick={() => selectTag(t.name)}>
-        #{t.name}{' '}
-      </span>
-    ))}
+    <div className="tag-links">
+      {tags.map(t => (
+        <span
+          className="tag-link"
+          key={t.name}
+          onClick={() => selectTag(t.name)}
+        >
+          #{t.name}{' '}
+        </span>
+      ))}
+    </div>
   </div>
 );
 

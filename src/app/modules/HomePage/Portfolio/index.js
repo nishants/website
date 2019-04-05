@@ -22,7 +22,7 @@ const Portfolio = () => (
   <div id="portfolio-page">
     <SearchTab
       data={data}
-      layout={{ maxWidth: 350, width: 270 }}
+      layout={{ maxWidth: 500, width: 350 }}
       CardComponent={PortfolioCard}
       shouldShowCard={shouldShowCard}
     />
