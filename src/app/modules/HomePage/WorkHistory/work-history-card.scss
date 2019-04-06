@@ -1,7 +1,8 @@
 $title_font_size: 23px;
 $descriptoin_font_size: $small_font;
 $work_card_image_width: 70px;
-$card_width: 100%;
+$padding: 10px;
+$card_width: calc(100% - #{2 * $padding});
 
 .work-history-card {
   display: block;
@@ -10,6 +11,8 @@ $card_width: 100%;
   text-align: left;
   border: 1px solid $light_border_color;
   background-color: $theme_light_bg;
+  margin: 0 $padding $padding 0;
+
   @extend .resize-container;
 
   .work-history-card-image {

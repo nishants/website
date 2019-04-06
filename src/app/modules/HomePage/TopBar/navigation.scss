@@ -64,6 +64,7 @@ $navigation_links_height: 45px;
         float: left;
         width: $link_width;
         color: $light_black_text;
+        cursor: pointer;
         a {
           display: block;
           color: inherit;
