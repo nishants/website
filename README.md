@@ -2,16 +2,19 @@
 
 Release Backlog:
 
-- allow multiple search items
-- trigger search one/way - from url
-- search as action (with saga)
 - create splash text
+
 - blog & work data update
 - create footer
 - fix search dropdown on click outside
 - delay for rendering search tab
 
-Done : 
+- allow multiple search items
+- trigger search one/way - from url
+- search as action (with saga)
+
+Done :
+
 - search by tag only (#)
 - create about-me tab
 - overflow container issue for search results
@@ -23,6 +26,10 @@ Next stage:
 - google analytics.
 - helmet
 - comments system with firebase + cloudfront
+
+Chat bot :
+
+- voie over generator : https://www.animaker.com/voice-app
 
 ### Features
 

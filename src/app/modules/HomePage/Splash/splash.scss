@@ -1,27 +1,29 @@
 $bulb-height: 168px;
-$bulb-width : 108px;
-$circle-size:$bulb-height + 70;
-$circle-scale-two : 2;
+$bulb-width: 108px;
+$circle-size: $bulb-height + 70;
+$circle-scale-two: 2;
 $circle-scale-three: 5;
 
-$bulb-initial-blue : 5px;
-$two-bulb-blur   : 2px;
+$bulb-initial-blue: 5px;
+$two-bulb-blur: 2px;
 
-$transition-time   : 500ms;
-$bg-transition-time   : 500ms;
-$transition-function   : ease;
+$transition-time: 500ms;
+$bg-transition-time: 500ms;
+$transition-function: ease;
 $one-transition-time: $transition-time;
 
 $total_slides: 4;
-$one-slide-offset  : 0%;
-$two-slide-offset  : 100px;
+$one-slide-offset: 0%;
+$two-slide-offset: 100px;
 $three-slide-offset: 27%;
-$four-slide-offset : 38%;
+$four-slide-offset: 38%;
 
 $one-bulb-state: blur(5px) grayscale(0%);
 $two-bulb-state: blur(1px) grayscale(5%);
 $three-bulb-state: blur(1px) grayscale(10%);
 $four-bulb-state: blur(1px) grayscale(10%);
+$splash_text_image_height: 25px;
+$splash_text_image_offest: 25px;
 
 @keyframes float {
   0% {
@@ -35,63 +37,76 @@ $four-bulb-state: blur(1px) grayscale(10%);
   }
 }
 
-#homepage-splash{
+#homepage-splash {
   background-color: black;
-  .scroller{
+  .scroller {
     height: 500px;
     width: 100vw;
     position: relative;
-    @include transition(#{background $bg-transition-time $transition-function, transform $transition-time $transition-function});
+    @include transition(
+      #{background $bg-transition-time $transition-function,
+      transform $transition-time $transition-function}
+    );
 
-    .bulb-image{
+    .bulb-image {
       position: absolute;
-      left    : calc(50% - #{$bulb-width/2});
-      top     : calc(50% - #{$bulb-height/2});
-      .bulb, .bulb-outline{
-        height  : $bulb-height;
-        width   : $bulb-width;
+      left: calc(50% - #{$bulb-width/2});
+      top: calc(50% - #{$bulb-height/2});
+      .bulb,
+      .bulb-outline {
+        height: $bulb-height;
+        width: $bulb-width;
         filter: blur(1px) grayscale(100%);
         @include transition(opacity $transition-time $transition-function);
         @include animation(float 6s ease-in-out infinite);
       }
-      .bulb{
+      .bulb {
         position: relative;
         top: -$bulb-height;
         z-index: 1;
       }
-      .splash-text{
+      .splash-text {
         position: absolute;
-        top     : calc(50% - #{$bulb-height/2});
+        top: calc(50% - #{$bulb-height/2});
         color: white;
-        width  : calc(100vw - #{$bulb-width/2});
+        width: calc(50vw - #{$bulb-width/2});
+        font-size: 21px;
+        svg {
+          height: $splash_text_image_height;
+        }
       }
 
-      .splash-text.pre-text{
+      .splash-text.pre-text {
         left: 0;
         padding-right: 20px;
         text-align: right;
-        @include transform(translateX(-100%) translateY(-50%));
+        @include transform(
+          translateX(calc(-100% + #{$splash_text_image_offest}))
+            translateY(-50%)
+        );
       }
-      .splash-text.post-text{
+      .splash-text.post-text {
         text-align: left;
         padding-left: 20px;
         left: 100%;
-        @include transform(translateY(-50%));
+        @include transform(
+          translateX(-$splash_text_image_offest) translateY(-50%)
+        );
       }
     }
 
-    .circle{
+    .circle {
       position: absolute;
-      height  : $circle-size;
-      width   : $circle-size;
-      left    : calc(50% - #{$circle-size/2});
-      top     : calc(50% - #{$circle-size/2});
+      height: $circle-size;
+      width: $circle-size;
+      left: calc(50% - #{$circle-size/2});
+      top: calc(50% - #{$circle-size/2});
       background-color: black;
       border-radius: 50%;
       @include transition(transform $bg-transition-time $transition-function);
       @include transform(scale(0));
     }
-    .bulb{
+    .bulb {
       opacity: 0;
       @include transition(opacity $bg-transition-time $transition-function);
       filter: blur($bulb-initial-blue) grayscale(100%);
@@ -144,34 +159,34 @@ $four-bulb-state: blur(1px) grayscale(10%);
   //  }
   //}
 
-  .scroller.one{
+  .scroller.one {
     @include transform(translateY(-$one-slide-offset));
-    .bulb-outline{
+    .bulb-outline {
       opacity: 1;
     }
-    .bulb{
+    .bulb {
       opacity: 0.5;
       filter: $one-bulb-state;
     }
   }
 
-  .scroller.scroller.two{
+  .scroller.scroller.two {
     @include transform(translateY(-$two-slide-offset));
-    .bulb-outline{
+    .bulb-outline {
       opacity: 1;
     }
-    .bulb{
+    .bulb {
       opacity: 1;
       filter: $two-bulb-state;
     }
   }
 
-  .scroller.scroller.three{
+  .scroller.scroller.three {
     @include transform(translateY(-$three-slide-offset) scale(0.75));
-    .bulb-outline{
+    .bulb-outline {
       opacity: 0.5;
     }
-    .bulb{
+    .bulb {
       opacity: 1;
       filter: $three-bulb-state;
     }
@@ -184,15 +199,14 @@ $four-bulb-state: blur(1px) grayscale(10%);
     //.circle{
     //  @include transform(scale(0));
     //}
-    .bulb-outline{
+    .bulb-outline {
       opacity: 0;
     }
-    .bulb{
+    .bulb {
       opacity: 1;
       filter: $four-bulb-state;
       @include transition(opacity $transition-time $transition-function);
       @include animation(float 6s ease-in-out infinite);
     }
   }
-
 }

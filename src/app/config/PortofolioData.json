@@ -207,8 +207,8 @@
       }
     ],
     "description": {
-      "lead": "Learning TDD by developing a hash table in Java.",
-      "follow": ""
+      "lead": "Learning TDD ",
+      "follow": "by implementing a hash table in Java."
     }
   },
   {

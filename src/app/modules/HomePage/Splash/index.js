@@ -2,13 +2,18 @@ import React from 'react';
 import ReactSVG from 'react-svg';
 import BulbSvg from './bulb.svg';
 
+import LeftQuote from './LeftQuote';
+import RightQuote from './RightQuote';
+
 const Splash = ({ splashState }) => (
   <div id="homepage-splash">
     <div className={`scroller ${splashState}`}>
       <div className="circle" />
       <div>
         <div className="bulb-image">
-          <div className="splash-text pre-text">Creativity</div>
+          <div className="splash-text pre-text">
+            <LeftQuote />
+          </div>
           <div className="bulb-outline">
             <ReactSVG src={BulbSvg} />
           </div>
@@ -18,7 +23,9 @@ const Splash = ({ splashState }) => (
               alt="bulb"
             />
           </div>
-          <div className="splash-text post-text">Simplicity</div>
+          <div className="splash-text post-text">
+            <RightQuote />
+          </div>
         </div>
       </div>
     </div>
