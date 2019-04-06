@@ -47,7 +47,8 @@ class SearchTab extends React.PureComponent {
     const {
       layout,
       CardComponent,
-      searchAndFilter: { searchString }
+      searchAndFilter: { searchString },
+      shouldShowCard
     } = this.props;
     const { selectTag } = this;
     const noneVisible = !cards.find(c => c.visible);
@@ -55,9 +56,10 @@ class SearchTab extends React.PureComponent {
     const items = cards.map(d => ({
       id: d.name || d.company,
       visible: d.visible,
+      data: d,
       Component: <CardComponent data={d} selectTag={selectTag} />
     }));
-    const orderBy = (a, b) => a.id > b.id;
+    const orderBy = (a, b) => shouldShowCard(b.data) > shouldShowCard(a.data);
 
     return (
       <div className="search-tab-items">

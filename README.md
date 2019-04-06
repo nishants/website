@@ -2,16 +2,21 @@
 
 Release Backlog:
 
-- search by tag onlye (#)
 - allow multiple search items
 - trigger search one/way - from url
 - search as action (with saga)
 - create splash text
-- create about-me tab : above all sections and
+- blog & work data update
+- create footer
+- fix search dropdown on click outside
+- delay for rendering search tab
+
+Done : 
+- search by tag only (#)
+- create about-me tab
 - overflow container issue for search results
 - blog and work history stlying
-- blog data update
-- create footer
+- links in sidebar
 
 Next stage:
 

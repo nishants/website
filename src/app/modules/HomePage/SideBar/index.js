@@ -4,26 +4,26 @@ import { Link } from 'react-router-dom';
 const SieBar = ({ search }) => (
   <div className="side-bar">
     <ul className="demo-links">
-      <li onClick={() => search('coaching')}>
-        <Link to="/portfolio">Coaching/Consulting</Link>
+      <li onClick={() => search('#coaching')}>
+        <Link to="/portfolio?search=#coaching">Coaching/Consulting</Link>
       </li>
-      <li onClick={() => search('development')}>
-        <Link to="/portfolio">Fullstack Development</Link>
+      <li onClick={() => search('#development')}>
+        <Link to="/portfolio?search=#development">Fullstack Development</Link>
       </li>
-      <li onClick={() => search('open-source')}>
-        <Link to="/portfolio">Open Source</Link>
+      <li onClick={() => search('#open-source')}>
+        <Link to="/portfolio?search=#open-source">Open Source</Link>
       </li>
-      <li onClick={() => search('testing')}>
-        <Link to="/portfolio">Test Automation </Link>
+      <li onClick={() => search('#testing')}>
+        <Link to="/portfolio?search=#testing">Test Automation </Link>
       </li>
-      <li onClick={() => search('tdd')}>
-        <Link to="/portfolio">Test Driven Development</Link>
+      <li onClick={() => search('#tdd')}>
+        <Link to="/portfolio?search=#tdd">Test Driven Development</Link>
       </li>
-      <li onClick={() => search('frontend')}>
-        <Link to="/portfolio">Frontend Development</Link>
+      <li onClick={() => search('#frontend')}>
+        <Link to="/portfolio?search=#frontend">Frontend Development</Link>
       </li>
-      <li onClick={() => search('design')}>
-        <Link to="/portfolio">Designs</Link>
+      <li onClick={() => search('#design')}>
+        <Link to="/portfolio?search=#design">Designs</Link>
       </li>
     </ul>
 

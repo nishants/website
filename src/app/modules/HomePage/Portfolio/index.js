@@ -7,15 +7,17 @@ import data from '../../../config/PortofolioData.json';
 
 const shouldShowCard = (card, searchString) => {
   const searchKey = searchString.toLowerCase(),
-    showByTag = card.tags.filter(t =>
-      t.name.toLowerCase().startsWith(searchKey)
-    ).length,
+    showByTag = card.tags.filter(
+      t => `#${t.name}` === searchKey || t.name === searchKey
+    ).length
+      ? 3
+      : 0,
     showByDescriptoin =
       card.description.lead.toLowerCase().includes(searchKey) ||
       card.description.follow.toLowerCase().includes(searchKey),
     showByTitle = card.name.toLowerCase().includes(searchKey);
 
-  return showByTag || showByDescriptoin || showByTitle;
+  return showByTag + showByDescriptoin + showByTitle;
 };
 
 const Portfolio = () => (
