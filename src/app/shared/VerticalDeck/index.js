@@ -70,10 +70,10 @@ const computeLayout = ({
     containerWidth
   });
   const voidWidth = containerWidth % naturalWidth;
-  const rowsCount = Math.floor(containerWidth / naturalWidth);
+  const rowsCount = Math.max(Math.floor(containerWidth / naturalWidth), 1);
   const suggesstedWidth = naturalWidth + voidWidth / rowsCount;
   const actualWidth =
-    rowsCount === 0
+    rowsCount === 1
       ? containerWidth
       : suggesstedWidth > maxWidth
       ? maxWidth
