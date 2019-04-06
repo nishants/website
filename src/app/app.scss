@@ -2,6 +2,7 @@
 
 @import './modules/HomePage/homepage';
 @import './shared/Loader/dual-ring-loader';
+$mobile_width: 800px;
 
 body {
   //background: $theme_dark_color; TODO remove
@@ -20,4 +21,8 @@ input {
   display: block;
   width: 100%;
   padding: 0 10px;
+}
+
+@media only screen and (max-width: $mobile_width) {
+  @import './app.mobile';
 }
