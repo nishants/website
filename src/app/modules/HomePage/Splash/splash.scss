@@ -71,6 +71,11 @@ $splash_text_image_offest: 25px;
         color: white;
         width: calc(50vw - #{$bulb-width/2});
         font-size: 21px;
+        @include transition(
+          #{filter 1000ms $transition-function,
+          opacity 100ms $transition-function}
+        );
+
         svg {
           height: $splash_text_image_height;
         }
@@ -80,18 +85,31 @@ $splash_text_image_offest: 25px;
         left: 0;
         padding-right: 20px;
         text-align: right;
+        opacity: 0;
+        filter: blur(10px);
         @include transform(
           translateX(calc(-100% + #{$splash_text_image_offest}))
             translateY(-50%)
         );
+
+        &.show {
+          opacity: 0.9;
+          filter: blur(0);
+        }
       }
       .splash-text.post-text {
         text-align: left;
         padding-left: 20px;
         left: 100%;
+        opacity: 0;
+        filter: blur(10px);
         @include transform(
           translateX(-$splash_text_image_offest) translateY(-50%)
         );
+        &.show {
+          opacity: 0.9;
+          filter: blur(0);
+        }
       }
     }
 
@@ -168,6 +186,9 @@ $splash_text_image_offest: 25px;
       opacity: 0.5;
       filter: $one-bulb-state;
     }
+    .splash-text {
+      @extend .show;
+    }
   }
 
   .scroller.scroller.two {
@@ -179,6 +200,9 @@ $splash_text_image_offest: 25px;
       opacity: 1;
       filter: $two-bulb-state;
     }
+    .splash-text {
+      @extend .show;
+    }
   }
 
   .scroller.scroller.three {
@@ -189,6 +213,9 @@ $splash_text_image_offest: 25px;
     .bulb {
       opacity: 1;
       filter: $three-bulb-state;
+    }
+    .splash-text {
+      @extend .show;
     }
   }
 
@@ -207,6 +234,9 @@ $splash_text_image_offest: 25px;
       filter: $four-bulb-state;
       @include transition(opacity $transition-time $transition-function);
       @include animation(float 6s ease-in-out infinite);
+    }
+    .splash-text {
+      @extend .show;
     }
   }
 }
