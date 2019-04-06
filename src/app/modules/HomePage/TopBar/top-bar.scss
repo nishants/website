@@ -107,7 +107,7 @@ $navigation_links_height: 46px;
   }
 
   .route-view-container {
-    @include transform(translateY(-45px));
+    @include transform(translateY(-$search_bar_height));
   }
 }
 

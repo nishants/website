@@ -1,0 +1,9 @@
+#about-me-page {
+  background-color: $theme_light_bg;
+  margin: 10px;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid $light_border_color;
+}
+
+@import 'about-me.top-bar';

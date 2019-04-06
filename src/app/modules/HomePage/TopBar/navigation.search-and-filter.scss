@@ -1,5 +1,4 @@
 $search_icon_width: 45px;
-$search_height: 40px;
 $search_input_offset: 5px;
 
 .search-and-filter {
@@ -22,7 +21,7 @@ $search_input_offset: 5px;
       left: 0;
       top: 0;
       z-index: 2;
-      line-height: $search_height;
+      line-height: $search_and_filter_bar_height;
       width: $search_icon_width;
       background: $grey;
       color: $light_black_text;
@@ -35,8 +34,8 @@ $search_input_offset: 5px;
       padding-left: $search_icon_width + 10px;
       border: 1px solid transparent;
       background-color: transparent;
-      height: $search_height;
-      line-height: $search_height;
+      height: $search_and_filter_bar_height;
+      line-height: $search_and_filter_bar_height;
       font-weight: $font_weight_bold;
       @include transition($transition);
     }

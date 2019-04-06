@@ -3,6 +3,7 @@ $splash_stages: 4;
 
 $homepage_side_bar_width: 250px;
 $search_bar_height: 45px;
+$search_and_filter_bar_height: 40px;
 
 #homepage {
   position: relative;
@@ -60,3 +61,4 @@ $search_bar_height: 45px;
 @import './WorkHistory/index';
 @import './SideBar/sidebar';
 @import './SearchTab/search-tab';
+@import './AboutMe/about-me';

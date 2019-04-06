@@ -103,7 +103,9 @@ class HomePage extends React.Component {
         id="homepage"
         className={`${profileReached ? 'profile-reached' : ''} ${
           scrollingUp ? 'scrolling-up' : ''
-        } ${stickNavigation ? 'stick-navigation' : ''}`}
+        } ${selectedNavigationLink}-page ${
+          stickNavigation ? 'stick-navigation' : ''
+        }`}
       >
         <section className="homepage-splash">
           <Splash splashState={splashScrollState} />

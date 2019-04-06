@@ -169,6 +169,9 @@
       },
       {
         "name": "coaching"
+      },
+      {
+        "name": "development"
       }
     ],
     "description": {
@@ -198,6 +201,9 @@
       },
       {
         "name": "coaching"
+      },
+      {
+        "name": "development"
       }
     ],
     "description": {
@@ -227,6 +233,9 @@
       },
       {
         "name": "coaching"
+      },
+      {
+        "name": "development"
       }
     ],
     "description": {
@@ -259,6 +268,9 @@
       },
       {
         "name": "micro-services"
+      },
+      {
+        "name": "development"
       }
     ],
     "description": {
@@ -269,6 +281,7 @@
   {
     "name": "Family Tree : NodeJS TDD Workshop",
     "src": "https://github.com/nishants/family-tree",
+    "image": "images/portfolio-items/nodejs.png",
     "tags": [
       {
         "name": "coaching"
@@ -287,6 +300,9 @@
       },
       {
         "name": "coaching"
+      },
+      {
+        "name": "development"
       }
     ],
     "description": {
@@ -449,6 +465,9 @@
       },
       {
         "name": "backend"
+      },
+      {
+        "name": "development"
       }
     ],
     "description": {
