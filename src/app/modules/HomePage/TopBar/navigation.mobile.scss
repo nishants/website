@@ -16,9 +16,24 @@
   }
 
   .navigation-links {
+    width: 100%;
     > ul {
       > li {
+        width: 25%;
+        height: $default_line_height;
+        overflow: hidden;
       }
     }
+  }
+}
+
+.fixed-to-window {
+  .navigation {
+    .profile-info {
+      display: none;
+    }
+  }
+  .side-bar {
+    display: none;
   }
 }
