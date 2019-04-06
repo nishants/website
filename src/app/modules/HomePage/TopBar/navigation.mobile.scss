@@ -1,0 +1,24 @@
+.navigation {
+  .profile-info {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 20px;
+
+    .small-profile-image {
+      display: none;
+    }
+    .profile-labels {
+      float: none;
+      text-align: center;
+      transform: none;
+      width: 100%;
+    }
+  }
+
+  .navigation-links {
+    > ul {
+      > li {
+      }
+    }
+  }
+}
