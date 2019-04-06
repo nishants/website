@@ -2,8 +2,6 @@
 
 Release Backlog:
 
-- create splash text
-
 - blog & work data update
 - create footer
 - fix search dropdown on click outside
@@ -15,6 +13,7 @@ Release Backlog:
 
 Done :
 
+- create splash text
 - search by tag only (#)
 - create about-me tab
 - overflow container issue for search results
