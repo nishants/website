@@ -1,5 +1,4 @@
 import React from 'react';
-import Loader from "../Loader";
 
 const creatGridItem = e => ({
   _e: e,
@@ -138,6 +137,9 @@ class VerticalDeck extends React.PureComponent {
 
   componentDidMount() {
     this.domObserver = new MutationObserver(this.updateLayout);
+    document
+      .querySelectorAll('img')
+      .forEach(i => i.addEventListener('load', this.updateLayout));
     window.addEventListener('resize', this.updateLayout);
 
     this.domObserver.observe(this.gridElement.current, {
@@ -146,12 +148,15 @@ class VerticalDeck extends React.PureComponent {
       subtree: true,
       characterData: true
     });
-    setTimeout(() => this.setState({ ready: true }), 1500);
+    setTimeout(() => this.setState({ ready: true }));
   }
 
   componentWillUnmount() {
     this.domObserver.disconnect();
     window.removeEventListener('resize', this.updateLayout);
+    document
+      .querySelectorAll('img')
+      .forEach(i => i.removeEventListener('load', this.updateLayout));
   }
 
   updateLayout = () => {
@@ -185,30 +190,23 @@ class VerticalDeck extends React.PureComponent {
     const { gridId, addItemRef, gridElement } = this;
 
     return (
-      <>
-        {!ready && (
-          <div className="vertical-deck-grid-loader">
-            <Loader />
-          </div>
-        )}
-        <ul
-          ref={gridElement}
-          className={`search-tab-items ${ready ? 'ready-now' : ''}`}
-          style={{ position: 'relative' }}
-        >
-          {items.map(Item => (
-            <li
-              className={`${Item.visible ? 'visible' : ''}`}
-              style={itemInitialStyle}
-              id={`${gridId}-${Item.id}`}
-              ref={addItemRef}
-              key={Item.id}
-            >
-              {Item.Component}
-            </li>
-          ))}
-        </ul>
-      </>
+      <ul
+        ref={gridElement}
+        className={`search-tab-items ${ready ? 'ready-now' : ''}`}
+        style={{ position: 'relative' }}
+      >
+        {items.map(Item => (
+          <li
+            className={`${Item.visible ? 'visible' : ''}`}
+            style={itemInitialStyle}
+            id={`${gridId}-${Item.id}`}
+            ref={addItemRef}
+            key={Item.id}
+          >
+            {Item.Component}
+          </li>
+        ))}
+      </ul>
     );
   }
 }
