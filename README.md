@@ -8,10 +8,6 @@ Release Backlog:
 - mobile support
 - unsupported browser message
 
-- allow multiple search items
-- trigger search one/way - from url
-- search as action (with saga)
-
 Done :
 
 - delay for rendering search tab
@@ -24,6 +20,9 @@ Done :
 
 Next stage:
 
+- optimize click responsiveness
+- allow multiple search items
+- trigger search one/way - from url
 - google analytics.
 - helmet
 - comments system with firebase + cloudfront

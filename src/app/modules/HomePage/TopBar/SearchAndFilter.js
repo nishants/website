@@ -7,9 +7,15 @@ class SearchAndFilter extends React.Component {
 
   setInActive = () => this.setState({ activated: false });
 
+  resetSearch = e => {
+    e.preventDefault();
+    this.props.search('');
+    setTimeout(this.setInActive);
+  };
+
   render() {
     const { activated } = this.state;
-    const { setActive, setInActive } = this;
+    const { setActive, setInActive, resetSearch } = this;
     const {
       searchAndFilter: { searchString, tags },
       search
@@ -38,10 +44,7 @@ class SearchAndFilter extends React.Component {
                 </span>
               ))}
               {searchString && searchString.length && (
-                <div
-                  onClick={() => search('')}
-                  className="clear-search-and-filter"
-                >
+                <div onClick={resetSearch} className="clear-search-and-filter">
                   Clear Search
                 </div>
               )}
