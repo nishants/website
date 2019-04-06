@@ -93,6 +93,7 @@ class HomePage extends React.Component {
 
     const {
       searchAndFilter,
+      dispatch,
       match: {
         params: { tab_id: selectedNavigationLink }
       }
@@ -135,6 +136,7 @@ class HomePage extends React.Component {
                   selectedLink={selectedNavigationLink}
                   searchAndFilter={searchAndFilter}
                   search={search}
+                  dispatch={dispatch}
                 />
               </div>
               <div className="fixed-to-window">
@@ -142,6 +144,7 @@ class HomePage extends React.Component {
                   selectedLink={selectedNavigationLink}
                   searchAndFilter={searchAndFilter}
                   search={search}
+                  dispatch={dispatch}
                 />
                 <SideBar search={search} />
               </div>

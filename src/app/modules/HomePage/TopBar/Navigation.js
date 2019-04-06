@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom';
 
 import SearchAndFilter from './SearchAndFilter';
 import ProfileImg from '../profile.jpg';
+import { searchForKey } from '../actions';
 
 class Navigation extends React.PureComponent {
+  resetSearch = () => this.props.dispatch(searchForKey(''));
+
   render() {
     const { selectedLink, searchAndFilter, search } = this.props;
+    const { resetSearch } = this;
+
     return (
       <div className={`navigation ${selectedLink || ''}`}>
         <div className="profile-info">
@@ -25,13 +30,13 @@ class Navigation extends React.PureComponent {
         </div>
         <div className="navigation-links">
           <ul>
-            <li className="portfolio-link">
+            <li className="portfolio-link" onClick={resetSearch}>
               <Link to="/portfolio"> Portfolio </Link>
             </li>
-            <li className="blog-link">
+            <li className="blog-link" onClick={resetSearch}>
               <Link to="/blog">Blog</Link>
             </li>
-            <li className="work-history-link">
+            <li className="work-history-link" onClick={resetSearch}>
               <Link to="/work-history"> Work History </Link>
             </li>
             <li className="about-me-link">
