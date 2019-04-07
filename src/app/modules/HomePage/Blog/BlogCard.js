@@ -7,8 +7,8 @@ const BlogCard = ({
   <div className="blog-card">
     <div className="blog-card-title">{heading}</div>
     <label>{subHeading}</label>
-    {image && <img className="blog-card-image" src={image} alt={heading} />}
     <p>{previewText}</p>
+    {image && <img className="blog-card-image" src={image} alt={heading} />}
 
     {link && (
       <a

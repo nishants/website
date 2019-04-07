@@ -1,16 +1,25 @@
 [
   {
-    "heading": "Science and beyond..",
-    "subHeading": "What is Science ?",
-    "previewText": "Science is the system of knowledge for understanding the universe we live in.",
-    "link": "https://medium.com/nishantsblog/science-and-beyond-8cc651d2d5b3",
-    "image": "images/blog-items/science-and-beyond.jpeg",
+    "heading": "Acceptance Test Driven Development",
+    "image": "images/blog-items/atdd.png",
+    "previewText": "ATDD or acceptance test driven development is the workflow for creating business softwares, in…",
+    "link": "https://medium.com/nishantsblog/acceptance-test-driven-development-3e31e44874cf",
     "tags": []
   },
+
+  {
+    "heading": "State Functions as Redux Models",
+    "image": "images/blog-items/state-functions.png",
+    "previewText": "When I first began learning about Redux, I instantaneously felt in love with it. I could define my…",
+    "link": "https://medium.com/nishantsblog/state-functions-for-modeling-with-redux-a9b9d452a631",
+    "tags": []
+  },
+
   {
     "heading": "Authorizing Blockchain transactions",
+    "image": "images/blog-items/scatterjs-with-react.jpeg",
     "subHeading": "How to user ScatterJS with React",
-    "previewText": "Science is the system of knowledge for understanding the universe we live in.",
+    "previewText": "Working example of ScatterJS with React/Redux for logging in user and autorizing transactions on EOS testnet.",
     "link": "https://medium.com/nishantsblog/scatterjs-with-react-redux-and-saga-ed2956eb2991",
     "tags": [
       { "name": "blockchain" },
@@ -20,39 +29,42 @@
       { "name": "auth" }
     ]
   },
+
+  {
+    "heading": "Science and beyond..",
+    "subHeading": "What is Science ?",
+    "previewText": "Science is the system of knowledge for understanding the universe we live in.",
+    "link": "https://medium.com/nishantsblog/science-and-beyond-8cc651d2d5b3",
+    "image": "images/blog-items/science-and-beyond.jpeg",
+    "tags": []
+  },
+
   {
     "heading": "Prototyping For Digital Product Design",
+    "image": "images/blog-items/prototyping.jpeg",
     "previewText": "Design the missing link of Product Development",
     "link": "https://medium.com/@nshnt/prototyping-for-digital-product-design-29a58821195e",
     "tags": []
   },
+
   {
     "heading": "Desktop App Development with Electron",
+    "image": "images/blog-items/electron-app.png",
     "previewText": "Desktop apps are always fun to build and use. They are the most powerful way of communicating…",
     "link": "https://medium.com/nishantsblog/desktop-app-development-with-electron-b27ac2b5d4d5?source=---------6------------------",
     "tags": []
   },
   {
     "heading": "Pug templates for React Presentation Components",
+    "image": "images/blog-items/pug-with-reactjs.png",
     "previewText": "ReactJS and Redux are really easy to learn. Though learning how to write some components and share state is pretty straightforward, how to organize codebase and responsibility is something that takes time to understand.",
     "link": "https://medium.com/nishantsblog/pug-templates-for-react-presentation-components-7610967954a",
     "tags": []
   },
 
   {
-    "heading": "State Functions as Redux Models",
-    "previewText": "When I first began learning about Redux, I instantaneously felt in love with it. I could define my…",
-    "link": "https://medium.com/nishantsblog/state-functions-for-modeling-with-redux-a9b9d452a631",
-    "tags": []
-  },
-  {
     "heading": "Migrating Rails Pages to AngularJS",
-    "previewText": "Well recently working with Zinc, I had the task to make the rails pages load with angular without…",
-    "link": "https://medium.com/nishantsblog/migrating-rails-pages-to-angularjs-6c01ced6cb88",
-    "tags": []
-  },
-  {
-    "heading": "Migrating Rails Pages to AngularJS",
+    "image": "images/blog-items/rails-to-angular.png",
     "previewText": "Well recently working with Zinc, I had the task to make the rails pages load with angular without…",
     "link": "https://medium.com/nishantsblog/migrating-rails-pages-to-angularjs-6c01ced6cb88",
     "tags": []
@@ -60,18 +72,21 @@
   {
     "heading": "Cross Browser Testing and Runtime",
     "previewText": "This is the seventh chapter in the 7 part series : Practical Guide to Test Automation.",
+    "image": "images/blog-items/test-automation-07-cross-browser.png",
     "link": "https://medium.com/@nshnt/cross-browser-testing-and-runtime-3f34d3d0ac50",
     "tags": []
   },
   {
     "heading": "Preparing Test Data",
     "previewText": "This is the fifth chapter in the 7 part series : Practical Guide to Test Automation.",
+    "image": "images/blog-items/test-automation-05-prep-data.png",
     "link": "https://medium.com/@nshnt/preparing-test-data-19b9d6af46b9",
     "tags": []
   },
   {
     "heading": "Organizing User Data in Tests",
     "previewText": "This is the fourth chapter in the 7 part series : Practical Guide to Test Automation.",
+    "image": "images/blog-items/test-automation-05-organize-data.png",
     "link": "https://medium.com/@nshnt/organizing-user-data-in-tests-a5d238dc3131",
     "tags": []
   },
@@ -84,19 +99,15 @@
   {
     "heading": "Writing Your First Test With Ruby",
     "previewText": "This is the second chapter in the 7 part series : Practical Guide to Test Automation.",
+    "image": "images/blog-items/test-automation-02-first-test.jpeg",
     "link": "https://medium.com/nishantsblog/writing-your-first-test-with-ruby-2838474ae543",
     "tags": []
   },
   {
     "heading": "Practical Guide to Test Automation",
     "previewText": "To kickoff the end to end test automation with ruby at Zinc, I found a severe lack of effective end…",
+    "image": "images/blog-items/test-automation-01.png",
     "link": "https://medium.com/nishantsblog/practical-guied-to-test-automation-89be28f56fd6",
-    "tags": []
-  },
-  {
-    "heading": "Acceptance Test Driven Development",
-    "previewText": "ATDD or acceptance test driven development is the workflow for creating business softwares, in…",
-    "link": "https://medium.com/nishantsblog/acceptance-test-driven-development-3e31e44874cf",
     "tags": []
   }
 ]
