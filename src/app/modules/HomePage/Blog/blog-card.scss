@@ -5,7 +5,7 @@ $card_width: calc(100% - #{2 * $padding});
 
 .blog-card {
   display: block;
-  padding: 20px;
+  padding: 40px;
   width: $card_width;
   text-align: left;
   border: 1px solid $light_border_color;
