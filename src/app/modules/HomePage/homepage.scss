@@ -43,7 +43,7 @@ $search_and_filter_bar_height: 40px;
         .route-view-container {
           @include transition(transform $transition_time $transition_function);
           overflow: hidden;
-          padding-top: $search_bar_height;
+          padding-top: 0;
           padding-bottom: 10px;
           background-color: $light_white;
           width: calc(100% - #{$homepage_side_bar_width});

@@ -35,6 +35,7 @@ class SearchTab extends React.PureComponent {
     const uniqueTags = allTags.filter((tag, i) => allTags.indexOf(tag) === i);
 
     dispatch(setTags(uniqueTags));
+    scrollToTop();
   }
 
   selectTag = searchString => {

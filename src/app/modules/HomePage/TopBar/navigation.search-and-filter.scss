@@ -71,6 +71,7 @@ $search_input_offset: 5px;
     box-shadow: $drop_down_shadow;
     border-top: 1px solid $light_grey_border_color;
     line-height: 20px;
+    overflow: hidden;
     > div {
       @include transition($transition);
       background-color: $grey;

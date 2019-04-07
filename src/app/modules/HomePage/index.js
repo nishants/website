@@ -34,7 +34,8 @@ class HomePage extends React.Component {
         '#homepage .homepage-content .fixed-to-page .profile-image-container'
       );
       const stickNavigation = scrolledReached(
-        '#homepage .homepage-content .fixed-to-page .navigation'
+        '#homepage .homepage-content .fixed-to-page .navigation',
+        1
       );
 
       let splashScrollState = '';
