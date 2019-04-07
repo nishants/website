@@ -3,7 +3,8 @@ import { HOME_ACTIONS } from './actions';
 const INITIAL_STATE = {
   searchAndFilter: {
     tags: [],
-    searchString: ''
+    searchString: '',
+    active: false
   }
 };
 
@@ -24,6 +25,15 @@ const reducer = (state = INITIAL_STATE, action) => {
         searchAndFilter: {
           ...state.searchAndFilter,
           tags: action.payload.tags
+        }
+      };
+
+    case HOME_ACTIONS.SET_SEARCH_AND_FILTER:
+      return {
+        ...state,
+        searchAndFilter: {
+          ...state.searchAndFilter,
+          active: action.payload.active
         }
       };
 

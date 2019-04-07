@@ -1,11 +1,9 @@
 import React from 'react';
 
 class SearchAndFilter extends React.Component {
-  state = { activated: false };
+  setActive = () => this.props.setActive(true);
 
-  setActive = () => this.setState({ activated: true });
-
-  setInActive = () => this.setState({ activated: false });
+  setInActive = () => this.props.setActive(false);
 
   resetSearch = e => {
     e.preventDefault();
@@ -14,10 +12,9 @@ class SearchAndFilter extends React.Component {
   };
 
   render() {
-    const { activated } = this.state;
     const { setActive, setInActive, resetSearch } = this;
     const {
-      searchAndFilter: { searchString, tags },
+      searchAndFilter: { searchString, tags, active: activated },
       search
     } = this.props;
 
@@ -33,6 +30,7 @@ class SearchAndFilter extends React.Component {
             <input
               placeholder="search"
               value={searchString}
+              onBlur={setInActive}
               onChange={e => search(e.target.value)}
             />
           </div>

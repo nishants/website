@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom';
 
 import SearchAndFilter from './SearchAndFilter';
 import ProfileImg from '../profile.jpg';
-import { searchForKey } from '../actions';
+import { searchForKey, setSearchAndFilter } from '../actions';
 
-class Navigation extends React.PureComponent {
+class Navigation extends React.Component {
   resetSearch = () => this.props.dispatch(searchForKey(''));
+
+  setSearch = active => this.props.dispatch(setSearchAndFilter(active));
 
   render() {
     const { selectedLink, searchAndFilter, search } = this.props;
-    const { resetSearch } = this;
+    const { resetSearch, setSearch } = this;
 
     return (
       <div className={`navigation ${selectedLink || ''}`}>
@@ -44,7 +46,11 @@ class Navigation extends React.PureComponent {
             </li>
           </ul>
           {/* <div className="navigation-indicator" /> */}
-          <SearchAndFilter searchAndFilter={searchAndFilter} search={search} />
+          <SearchAndFilter
+            searchAndFilter={searchAndFilter}
+            search={search}
+            setActive={setSearch}
+          />
         </div>
       </div>
     );

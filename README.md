@@ -3,10 +3,12 @@
 Release Backlog:
 
 - blog & work data update
-- fix search dropdown on click outside
 - create footer
-- mobile support
 - unsupported browser message
+- work history on mobile
+- navigation bar stick for mobile fix
+- sidebar in about-me for mobile
+- search and filter active state in redux
 
 Done :
 
@@ -17,6 +19,8 @@ Done :
 - overflow container issue for search results
 - blog and work history stlying
 - links in sidebar
+- fix search dropdown on click outside
+- mobile support
 
 Next stage:
 
