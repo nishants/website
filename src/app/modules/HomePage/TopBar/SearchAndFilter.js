@@ -26,7 +26,17 @@ class SearchAndFilter extends React.Component {
           onMouseLeave={setInActive}
         >
           <div className="search-and-filter-input">
-            <i className="search-icon fas fa-search" />
+            <span
+              className={`search-indicator-icon ${
+                searchString ? 'can-reset-search' : ''
+              }`}
+            >
+              <i className="search-icon fas fa-search" />
+              <i
+                className="reset-search-icon fas fa-times"
+                onClick={resetSearch}
+              />
+            </span>
             <input
               placeholder="search"
               value={searchString}
@@ -41,11 +51,6 @@ class SearchAndFilter extends React.Component {
                   #{t}
                 </span>
               ))}
-              {searchString && searchString.length && (
-                <div onClick={resetSearch} className="clear-search-and-filter">
-                  Clear Search
-                </div>
-              )}
             </div>
           </div>
         </div>

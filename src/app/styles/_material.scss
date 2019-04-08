@@ -4,6 +4,7 @@ $transition_function: ease;
 //$transition_function: cubic-bezier(0.25, 0.8, 0.25, 1);
 
 $transition: all $transition_time $transition_function;
+$transition_moves: transform $transition_time $transition_function;
 $transition_move_and_fade: #{transform $transition_time $transition_function,
   opacity $transition_time $transition_function};
 

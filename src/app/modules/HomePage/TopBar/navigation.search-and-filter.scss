@@ -16,16 +16,52 @@ $search_input_offset: 5px;
     background-color: $light_white;
     border-radius: $default_border_radius;
 
-    .search-icon {
+    .search-indicator-icon {
       position: absolute;
       left: 0;
       top: 0;
       z-index: 2;
       line-height: $search_and_filter_bar_height;
+      height: $search_and_filter_bar_height;
       width: $search_icon_width;
       background: $grey;
       color: $light_black_text;
       @include transition($transition);
+
+      .search-icon,
+      .reset-search-icon {
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: inherit;
+        @include transition($transition_moves);
+
+        &.hide {
+          @include transform(scale(0));
+        }
+
+        &.show {
+          @include transform(none);
+        }
+      }
+      .reset-search-icon {
+        position: relative;
+        top: -100%;
+        cursor: pointer;
+        @extend .hide;
+      }
+
+      &.can-reset-search {
+        @include transform(scale(0.8));
+        background-color: $danger_red;
+        .search-icon {
+          @extend .hide;
+        }
+        .reset-search-icon {
+          color: $light_white;
+          @extend .show;
+        }
+      }
     }
     input {
       display: block;
@@ -52,7 +88,7 @@ $search_input_offset: 5px;
           translateX(-$search_icon_width + $search_input_offset * 2 + 10px)
         );
       }
-      .search-icon {
+      .search-indicator-icon {
         color: $light_border_color;
         background-color: transparent;
         @include transform(translateX(-$search_input_offset));
@@ -83,13 +119,13 @@ $search_input_offset: 5px;
       cursor: pointer;
     }
 
-    .clear-search-and-filter {
-      cursor: pointer;
-      text-align: center;
-      border: 1px solid;
-      height: 40px;
-      line-height: 40px;
-    }
+    //.clear-search-and-filter {
+    //  cursor: pointer;
+    //  text-align: center;
+    //  border: 1px solid;
+    //  height: 40px;
+    //  line-height: 40px;
+    //}
   }
 
   //.search-and-filter-backdrop{
@@ -115,6 +151,11 @@ $search_input_offset: 5px;
     }
     .search-and-filter-backdrop {
       @include transform(scale(0));
+    }
+    .search-indicator-icon.can-reset-search {
+      .reset-search-icon {
+        color: $light_border_color;
+      }
     }
   }
 }

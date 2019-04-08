@@ -2,20 +2,19 @@
 
 Release Backlog:
 
-- blog & work data update : add tags
-- search tag style
 - clear search in place of search icon
+- search tag style
 - create footer
 - unsupported browser message
 - sidebar in about-me for mobile
-- no scroll on search (scroll on card hash clicked)
-- fix search experience on mobile.
-- smoothly stick top bar
 - first click not working
-- work history page : on refresh layout issue (floating child porblem)
+- wrong input being selected for search
 
 Done :
 
+- smoothly stick top bar
+- blog & work data update : add tags
+- no scroll on search (scroll on card hash clicked)
 - delay for rendering search tab
 - create splash text
 - search by tag only (#)
@@ -31,6 +30,7 @@ Done :
 
 Next stage:
 
+- work history page : on refresh layout issue (floating child porblem)
 - optimize click responsiveness
 - allow multiple search items
 - trigger search one/way - from url
