@@ -2,8 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { searchForKey } from '../actions';
+import { scrollToTop } from '../../../shared/util';
 
 class AboutMe extends React.PureComponent {
+  componentDidMount() {
+    scrollToTop();
+  }
+
   search = searchString => this.props.dispatch(searchForKey(searchString));
 
   render() {
@@ -18,15 +23,15 @@ class AboutMe extends React.PureComponent {
         <p>
           I have{' '}
           <Link
-            to="/portfolio?search=development"
-            onClick={() => search('development')}
+            to="/portfolio?search=#development"
+            onClick={() => search('#development')}
           >
             full-stack development
           </Link>{' '}
           experience, building RESTful services,{' '}
           <Link
-            to="/portfolio?search=testing"
-            onClick={() => search('testing')}
+            to="/portfolio?search=#testing"
+            onClick={() => search('#testing')}
           >
             test automation
           </Link>{' '}
@@ -36,27 +41,30 @@ class AboutMe extends React.PureComponent {
           </Link>
           ,{' '}
           <Link
-            to="/portfolio?search=javascript"
-            onClick={() => search('javascript')}
+            to="/portfolio?search=#javascript"
+            onClick={() => search('#javascript')}
           >
             Javascript
           </Link>
           ,{' '}
-          <Link to="/portfolio?search=ruby" onClick={() => search('ruby')}>
+          <Link to="/portfolio?search=#ruby" onClick={() => search('#ruby')}>
             Ruby
           </Link>
           ,{' '}
-          <Link to="/portfolio?search=nodejs" onClick={() => search('nodejs')}>
+          <Link
+            to="/portfolio?search=#nodejs"
+            onClick={() => search('#nodejs')}
+          >
             NodeJS
           </Link>
           ,{' '}
-          <Link to="/work-history?search=java" onClick={() => search('java')}>
+          <Link to="/work-history?search=#java" onClick={() => search('#java')}>
             Spring, Hibernate
           </Link>
           , and single page applications with{' '}
           <Link
-            to="/portfolio?search=frontend"
-            onClick={() => search('frontend')}
+            to="/portfolio?search=#frontend"
+            onClick={() => search('#frontend')}
           >
             {' '}
             AngularJS and React + Redux
