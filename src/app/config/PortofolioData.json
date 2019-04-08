@@ -168,9 +168,6 @@
         "name": "backend"
       },
       {
-        "name": "coaching"
-      },
-      {
         "name": "development"
       }
     ],
@@ -198,9 +195,6 @@
       },
       {
         "name": "backend"
-      },
-      {
-        "name": "coaching"
       },
       {
         "name": "development"
@@ -232,9 +226,6 @@
         "name": "backend"
       },
       {
-        "name": "coaching"
-      },
-      {
         "name": "development"
       }
     ],
@@ -262,9 +253,6 @@
       },
       {
         "name": "backend"
-      },
-      {
-        "name": "coaching"
       },
       {
         "name": "micro-services"
@@ -299,9 +287,6 @@
         "name": "backend"
       },
       {
-        "name": "coaching"
-      },
-      {
         "name": "development"
       }
     ],
@@ -323,9 +308,6 @@
       },
       {
         "name": "coaching"
-      },
-      {
-        "name": "frontend"
       }
     ],
     "description": {
@@ -553,9 +535,6 @@
       },
       {
         "name": "javascript"
-      },
-      {
-        "name": "development"
       }
     ],
     "description": {
