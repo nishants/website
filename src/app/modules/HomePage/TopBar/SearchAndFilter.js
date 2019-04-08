@@ -5,14 +5,19 @@ class SearchAndFilter extends React.Component {
 
   setInActive = () => this.props.setActive(false);
 
-  resetSearch = () => {
-    // e.preventDefault();
+  resetSearch = e => {
     this.props.search('');
+    e.preventDefault();
     // setTimeout(this.setInActive);
   };
 
+  searchTag = tag => {
+    this.props.search(tag);
+    this.setInActive();
+  };
+
   render() {
-    const { setActive, setInActive, resetSearch } = this;
+    const { setActive, setInActive, resetSearch, searchTag } = this;
     const {
       searchAndFilter: { searchString, tags, active: activated },
       search
@@ -52,7 +57,7 @@ class SearchAndFilter extends React.Component {
           <div className="search-and-filter-dropdown">
             <div>
               {tags.map(t => (
-                <span key={t} className="tag-link" onClick={() => search(t)}>
+                <span key={t} className="tag-link" onClick={() => searchTag(t)}>
                   #{t}
                 </span>
               ))}

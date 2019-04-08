@@ -167,7 +167,7 @@ $search_input_offset: 5px;
   left: 0;
   top: 0;
   z-index: 1;
-  background-color: $light_border_color;
+  background-color: transparent;
 
   &:not(.show-backdrop) {
     @include transform(scale(0));

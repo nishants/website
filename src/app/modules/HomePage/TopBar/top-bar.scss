@@ -114,6 +114,7 @@ $navigation_links_height: 46px;
 #homepage.stick-navigation:not(.scrolling-up) {
   .fixed-to-window {
     .search-and-filter {
+      pointer-events: none;
       @include transform(translateY(calc(-100% + 5px)));
     }
   }
