@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { searchForKey } from '../actions';
 import { scrollToTop } from '../../../shared/util';
+import SocialLinks from '../SocialLinks';
 
 class AboutMe extends React.PureComponent {
   componentDidMount() {
@@ -96,6 +97,10 @@ class AboutMe extends React.PureComponent {
           </Link>{' '}
           and mentoring.
         </p>
+
+        <div className="connect-with-me">
+          <SocialLinks />
+        </div>
       </div>
     );
   }
