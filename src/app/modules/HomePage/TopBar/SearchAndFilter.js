@@ -5,10 +5,10 @@ class SearchAndFilter extends React.Component {
 
   setInActive = () => this.props.setActive(false);
 
-  resetSearch = e => {
-    e.preventDefault();
+  resetSearch = () => {
+    // e.preventDefault();
     this.props.search('');
-    setTimeout(this.setInActive);
+    // setTimeout(this.setInActive);
   };
 
   render() {
@@ -22,7 +22,7 @@ class SearchAndFilter extends React.Component {
       <>
         <div
           className={`search-and-filter ${activated ? 'active' : ''}`}
-          onClick={setActive}
+          onMouseEnter={setActive}
           onMouseLeave={setInActive}
         >
           <div className="search-and-filter-input">

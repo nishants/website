@@ -1,5 +1,21 @@
 [
   {
+    "position": "Team Lead",
+    "company": "Birdeye",
+    "fromDate": "May 2018",
+    "toDate": "April 2019",
+    "location": "Gurugram, India",
+    "description": "<p>Lead a team of 10 engineers to rewrite the platform in ReactJS and building content management server using NodeJS, ExpressJS, AWS, Postgres.<p/><ul><li>Design and Architecture of in-house CMS</li><li>Leading team of frontend and backend developers</li><li>Introduction of test automation with ruby</li><li>Setup and maintenance of CI builds with Jenkins and EC2</li></ul>",
+    "image": "images/work-history-items/birdeye.png",
+    "tags": [
+      { "name": "nodejs" },
+      { "name": "reactjs" },
+      { "name": "aws" },
+      { "name": "jenkins" },
+      { "name": "javascript" }
+    ]
+  },
+  {
     "position": "Design and Quality Consultant",
     "company": "Zinc Learning Labs",
     "fromDate": "Mar 2017",
@@ -8,11 +24,17 @@
     "description": "<p>Introduced the concept of prototyping for new features. Leading the design sprints, worked with founder and content writers to deliver prototype every week. Delivered CRE, soon to be the flagship offering of the company.</p> <p>This is the product that was developed out of my personal project : <a href='https://www.youtube.com/watch?v=FKJoxD91f1s&feature=youtu.be' target='_blank' rel='noopener noreferrer'>link</a></p><p>Designed the architecture for end to end tests, conducted training sessions and integrated with build pipeline.</p><p>Designed frontend architecture to convert the platform into a single page application. This was challenging because different pages in UI were being rendered by three different technologies Rails, AngularJS and React+Redux. Had to make all three work together without needing a page reload.</p>",
     "image": "images/work-history-items/zinc.png",
     "tags": [
-      { "name": "java" },
-      { "name": "oracle" },
-      { "name": "servlets" },
-      { "name": "html" },
-      { "name": "jsp" }
+      { "name": "reactjs" },
+      { "name": "angularjs" },
+      { "name": "ruby" },
+      { "name": "javascript" },
+      { "name": "rails" },
+      { "name": "redis" },
+      { "name": "aws" },
+      { "name": "teamcity" },
+      { "name": "semaphoreci" },
+      { "name": "test-automation" },
+      { "name": "agile" }
     ]
   },
   {
@@ -25,10 +47,15 @@
     "image": "images/work-history-items/agility.png",
     "tags": [
       { "name": "java" },
-      { "name": "oracle" },
-      { "name": "servlets" },
-      { "name": "html" },
-      { "name": "jsp" }
+      { "name": "ruby" },
+      { "name": "spring" },
+      { "name": "hibernate" },
+      { "name": "angularjs" },
+      { "name": "test-automation" },
+      { "name": "coaching" },
+      { "name": "consulting" },
+      { "name": "tdd" },
+      { "name": "agile" }
     ]
   },
   {
@@ -41,10 +68,16 @@
     "image": "images/work-history-items/xebia.png",
     "tags": [
       { "name": "java" },
-      { "name": "oracle" },
-      { "name": "servlets" },
-      { "name": "html" },
-      { "name": "jsp" }
+      { "name": "spring" },
+      { "name": "hibernate" },
+      { "name": "javascript" },
+      { "name": "angularjs" },
+      { "name": "test-automation" },
+      { "name": "coaching" },
+      { "name": "consulting" },
+      { "name": "tdd" },
+      { "name": "agile" },
+      { "name": "jenkins" }
     ]
   },
   {
@@ -57,10 +90,14 @@
     "image": "images/work-history-items/tw.png",
     "tags": [
       { "name": "java" },
-      { "name": "oracle" },
-      { "name": "servlets" },
-      { "name": "html" },
-      { "name": "jsp" }
+      { "name": "ruby" },
+      { "name": "javascript" },
+      { "name": "spring" },
+      { "name": "hibernate" },
+      { "name": "angularjs" },
+      { "name": "test-automation" },
+      { "name": "tdd" },
+      { "name": "agile" }
     ]
   },
   {

@@ -12,6 +12,7 @@ Release Backlog:
 - fix search experience on mobile.
 - smoothly stick top bar
 - first click not working
+- work history page : on refresh layout issue (floating child porblem)
 
 Done :
 
