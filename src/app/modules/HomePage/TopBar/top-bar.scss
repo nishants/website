@@ -10,6 +10,7 @@ $navigation_links_height: 46px;
 
 #top-bar {
   position: relative;
+  background-color: $theme_light_bg;
   .profile {
     padding: 0 $side_padding;
     overflow: hidden;
@@ -61,6 +62,7 @@ $navigation_links_height: 46px;
       box-shadow: $bar_shadow;
     }
   }
+
   .work-credits {
     top: 0;
     left: 0;
@@ -109,7 +111,7 @@ $navigation_links_height: 46px;
   }
 }
 
-#homepage:not(.scrolling-up) {
+#homepage.stick-navigation:not(.scrolling-up) {
   .fixed-to-window {
     .search-and-filter {
       @include transform(translateY(calc(-100% + 5px)));

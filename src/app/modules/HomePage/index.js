@@ -14,11 +14,7 @@ import WorkHistory from './WorkHistory';
 import AboutMe from './AboutMe';
 
 import { searchForKey } from './actions';
-import {
-  scrollToTop,
-  scrolledReached,
-  getScrollPosition
-} from '../../shared/util';
+import { scrolledReached, getScrollPosition } from '../../shared/util';
 
 class HomePage extends React.Component {
   state = {
@@ -34,8 +30,7 @@ class HomePage extends React.Component {
         '#homepage .homepage-content .fixed-to-page .profile-image-container'
       );
       const stickNavigation = scrolledReached(
-        '#homepage .homepage-content .fixed-to-page .navigation',
-        1
+        '#homepage .homepage-content .fixed-to-page .navigation .navigation-links'
       );
 
       let splashScrollState = '';
@@ -77,7 +72,7 @@ class HomePage extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
-      scrollToTop();
+      // scrollToTop();
     }
   }
 

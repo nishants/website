@@ -2,13 +2,16 @@
 
 Release Backlog:
 
-- blog & work data update
+- blog & work data update : add tags
+- search tag style
+- clear search in place of search icon
 - create footer
 - unsupported browser message
-- work history on mobile
-- navigation bar stick for mobile fix
 - sidebar in about-me for mobile
-- search and filter active state in redux
+- no scroll on search (scroll on card hash clicked)
+- fix search experience on mobile.
+- smoothly stick top bar
+- first click not working
 
 Done :
 
@@ -21,6 +24,9 @@ Done :
 - links in sidebar
 - fix search dropdown on click outside
 - mobile support
+- search and filter active state in redux
+- navigation bar stick for mobile fix
+- work history on mobile
 
 Next stage:
 
