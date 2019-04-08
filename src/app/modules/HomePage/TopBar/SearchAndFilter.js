@@ -21,9 +21,15 @@ class SearchAndFilter extends React.Component {
     return (
       <>
         <div
+          className={`search-and-input-backdrop ${
+            activated ? 'show-backdrop' : ''
+          }`}
+          onClick={setInActive}
+          onMouseEnter={setInActive}
+        />
+        <div
           className={`search-and-filter ${activated ? 'active' : ''}`}
           onMouseEnter={setActive}
-          onMouseLeave={setInActive}
         >
           <div className="search-and-filter-input">
             <span
@@ -40,7 +46,6 @@ class SearchAndFilter extends React.Component {
             <input
               placeholder="search"
               value={searchString}
-              onBlur={setInActive}
               onChange={e => search(e.target.value)}
             />
           </div>

@@ -159,3 +159,17 @@ $search_input_offset: 5px;
     }
   }
 }
+
+.search-and-input-backdrop {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: $light_border_color;
+
+  &:not(.show-backdrop) {
+    @include transform(scale(0));
+  }
+}
