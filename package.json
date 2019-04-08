@@ -24,7 +24,7 @@
     "precommit": "NODE_ENV=production lint-staged",
     "lint": "eslint src/ --fix && stylelint src/*.scss --fix",
     "deploy": "yarn build && scp -r  ./build/* dawnleo@amoeba.social:/home/dawnleo/new.nishants.site/public/",
-    "deploy:prod": "yarn lint && yarn test && yarn build && scp -r  ./build/* dawnleo@amoeba.social:/home/dawnleo/nishants.site/public/"
+    "deploy:prod": "yarn lint && CI=true yarn test && yarn build && scp -r  ./build/* dawnleo@amoeba.social:/home/dawnleo/nishants.site/public/"
   },
   "lint-staged": {
     "*.{js,jsx}": [

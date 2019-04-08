@@ -2,16 +2,13 @@
 
 Release Backlog:
 
-- clear search in place of search icon
-- search tag style
 - create footer
 - unsupported browser message
 - sidebar in about-me for mobile
-- first click not working
-- wrong input being selected for search
 
 Done :
-
+- clear search in place of search icon
+- search tag style
 - smoothly stick top bar
 - blog & work data update : add tags
 - no scroll on search (scroll on card hash clicked)
@@ -29,6 +26,8 @@ Done :
 - work history on mobile
 
 Next stage:
+- first click not working
+- wrong input being selected for search
 
 - work history page : on refresh layout issue (floating child porblem)
 - optimize click responsiveness
