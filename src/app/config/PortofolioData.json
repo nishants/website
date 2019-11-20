@@ -1,5 +1,21 @@
 [
   {
+    "name": "Guided Learning Experience",
+    "no-mobile": "true",
+    "demo": "http://nishants.site/zinc/crg/",
+    "video": "https://www.youtube.com/watch?v=FKJoxD91f1s",
+    "image": "images/portfolio-items/gle-demo.gif",
+    "tags": [
+      {
+        "name": "development"
+      }
+    ],
+    "description": {
+      "lead": "Extending the idea of chatbot ",
+      "follow": "to create video driven user experience, to engage school students in learning exercise. It was my  personal project is now USP (Close reading games)  of https://www.zinclearninglabs.com/."
+    }
+  },
+  {
     "type": "ui",
     "name": "Jeyson Template Engine",
     "src": "public/pages/jeyson",

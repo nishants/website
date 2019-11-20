@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../components/Button';
 
 const PortfolioCard = ({
-  data: { name, src, demo, tags, image, description, article },
+  data: { name, src, demo, tags, image, description, article, video },
   selectTag
 }) => (
   <div className="portfolio-card">
@@ -14,6 +14,7 @@ const PortfolioCard = ({
     </p>
 
     <div>
+      {video && <Button href={video}>Watch Video</Button>}
       {article && <Button href={demo}>Read</Button>}
 
       {demo && <Button href={demo}>View Demo</Button>}
