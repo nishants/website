@@ -7,8 +7,12 @@
     "image": "images/portfolio-items/gle-demo.gif",
     "tags": [
       {
+        "name": "design"
+      },
+      {
         "name": "development"
       }
+
     ],
     "description": {
       "lead": "Extending the idea of chatbot ",
