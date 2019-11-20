@@ -1,7 +1,8 @@
 import React from 'react';
+import Button from '../components/Button';
 
 const PortfolioCard = ({
-  data: { name, src, demo, tags, image, description },
+  data: { name, src, demo, tags, image, description, article },
   selectTag
 }) => (
   <div className="portfolio-card">
@@ -13,23 +14,11 @@ const PortfolioCard = ({
     </p>
 
     <div>
-      {demo && (
-        <a className="portfolio-card-demo" href={demo}>
-          Demo
-        </a>
-      )}
+      {article && <Button href={demo}>Read</Button>}
 
-      {src && (
-        <a
-          className="portfolio-card-src"
-          href={src}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fas fa-link" />
-          src
-        </a>
-      )}
+      {demo && <Button href={demo}>View Demo</Button>}
+
+      {src && <Button href={src}>View Source Code</Button>}
     </div>
 
     <div className="tag-links">

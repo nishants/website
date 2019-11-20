@@ -74,7 +74,7 @@
   },
   {
     "name": "State Functions as Redux Models",
-    "src": "https://medium.com/nishantsblog/state-functions-for-modeling-with-redux-a9b9d452a631",
+    "article": "https://medium.com/nishantsblog/state-functions-for-modeling-with-redux-a9b9d452a631",
     "image": "images/portfolio-items/state_functions.png",
     "tags": [
       {
@@ -124,7 +124,7 @@
   {
     "name": "LookLike Online Runner for Ruby",
     "no-mobile": "true",
-    "src": "http://amoeba.social/lab/look-like/",
+    "demo": "http://amoeba.social/lab/look-like/",
     "image": "images/portfolio-items/look_like.png",
     "tags": [
       {
@@ -339,7 +339,7 @@
   {
     "name": "Gaming Experience with Alien Theme : AngularJS Workshop",
     "image": "images/portfolio-items/start-wars.gif",
-    "src": "http://nishants.site/lab/star-wars/",
+    "demo": "http://nishants.site/lab/star-wars/",
     "tags": [
       {
         "name": "design"
@@ -369,7 +369,7 @@
   {
     "name": "Interactive Theme Design for Edtech Startup",
     "image": "images/portfolio-items/zinc-imagine.gif",
-    "src": "http://nishants.site/zinc/re-imagine",
+    "demo": "http://nishants.site/zinc/re-imagine",
     "tags": [
       {
         "name": "design"
@@ -389,7 +389,7 @@
   {
     "name": "Mobile App Design for Apparels Renting Startup",
     "image": "images/portfolio-items/rob-robes.gif",
-    "src": "http://nishants.site/rob-the-robes-mockup.pdf",
+    "demo": "http://nishants.site/rob-the-robes-mockup.pdf",
     "tags": [
       {
         "name": "design"
@@ -402,7 +402,7 @@
   },
   {
     "name": "Chakra",
-    "src": "https://boiling-scrubland-7787.herokuapp.com/",
+    "demo": "https://boiling-scrubland-7787.herokuapp.com/",
     "image": "images/portfolio-items/chakra.png",
     "tags": [
       {
@@ -428,7 +428,7 @@
   },
   {
     "name": "RubyLab",
-    "src": "http://amoeba.social/practice-labs/ruby-for-qa/",
+    "demo": "http://amoeba.social/practice-labs/ruby-for-qa/",
     "tags": [
       {
         "name": "design"
@@ -459,7 +459,7 @@
   },
   {
     "name": "360 deg Panorama View",
-    "src": "http://amoeba.social/dump/lab/scroll-magic.html",
+    "demo": "http://amoeba.social/dump/lab/scroll-magic.html",
     "image": "images/portfolio-items/panorama.gif",
     "tags": [
       {
@@ -489,7 +489,7 @@
   },
   {
     "name": "Interactive Theme Design for Designer Furniture Startup",
-    "src": "http://amoeba.social/dump/concepts/treniq/",
+    "demo": "http://amoeba.social/dump/concepts/treniq/",
     "image": "images/portfolio-items/treniq.gif",
     "tags": [
       {
@@ -544,7 +544,7 @@
   },
   {
     "name": "Calendar with Angular",
-    "src": "http://amoeba.social/dump/lessons/calendar/index.html",
+    "demo": "http://amoeba.social/dump/lessons/calendar/index.html",
     "tags": [
       {
         "name": "frontend"
@@ -557,7 +557,7 @@
   },
   {
     "name": "Infield Form",
-    "src": "http://amoeba.social/dump/lab/infield",
+    "demo": "http://amoeba.social/dump/lab/infield",
     "tags": [
       {
         "name": "frontend"
@@ -569,21 +569,8 @@
     }
   },
   {
-    "name": "Google Map Search with AngularJS",
-    "src": "http://amoeba.social/dump/google-maps-angular/searchbox.html",
-    "tags": [
-      {
-        "name": "frontend"
-      }
-    ],
-    "description": {
-      "lead": "Using Google Maps Location Search API",
-      "follow": "with Angularjs and SCSS."
-    }
-  },
-  {
     "name": "CNN Video Transition",
-    "src": "http://amoeba.social/dump/design-fix/cnn",
+    "demo": "http://amoeba.social/dump/design-fix/cnn",
     "image": "images/portfolio-items/cnn.gif",
     "tags": [
       {
@@ -597,7 +584,7 @@
   },
   {
     "name": "Slate Interaction",
-    "src": "http://amoeba.social/dump/concepts/slate/index.html",
+    "demo": "http://amoeba.social/dump/concepts/slate/index.html",
     "image": "images/portfolio-items/slate.gif",
     "tags": [
       {
@@ -611,7 +598,7 @@
   },
   {
     "name": "Scroll Progress",
-    "src": "http://amoeba.social/dump/lab/scroll-progress/index.html",
+    "demo": "http://amoeba.social/dump/lab/scroll-progress/index.html",
     "tags": [
       {
         "name": "frontend"
@@ -624,7 +611,7 @@
   },
   {
     "name": "Filter Menu Design",
-    "src": "http://amoeba.social/dump/lab/xsaas",
+    "demo": "http://amoeba.social/dump/lab/xsaas",
     "tags": [
       {
         "name": "frontend"
@@ -640,7 +627,7 @@
   },
   {
     "name": "Tetris Navigation",
-    "src": "http://amoeba.social/dump/concepts/tetris-scroll",
+    "demo": "http://amoeba.social/dump/concepts/tetris-scroll",
     "tags": [
       {
         "name": "frontend"
@@ -656,7 +643,7 @@
   },
   {
     "name": "Scroll Jacking",
-    "src": "http://amoeba.social/dump/lab/scroll/x-scroll.html",
+    "demo": "http://amoeba.social/dump/lab/scroll/x-scroll.html",
     "tags": [
       {
         "name": "frontend"
@@ -670,7 +657,7 @@
   {
     "type": "ui",
     "name": "Theater Booking",
-    "src": "http://amoeba.social/dump/theater-booking.html",
+    "demo": "http://amoeba.social/dump/theater-booking.html",
     "tags": [
       {
         "name": "frontend"
@@ -683,7 +670,7 @@
   },
   {
     "name": "Wizard Design",
-    "src": "http://amoeba.social/dump/tiktik2",
+    "demo": "http://amoeba.social/dump/tiktik2",
     "tags": [
       {
         "name": "frontend"
@@ -699,7 +686,7 @@
   },
   {
     "name": "Circular Loader",
-    "src": "http://amoeba.social/dump/circular-loader.html",
+    "demo": "http://amoeba.social/dump/circular-loader.html",
     "tags": [
       {
         "name": "frontend"
@@ -712,7 +699,7 @@
   },
   {
     "name": "Shutter Menu",
-    "src": "http://amoeba.social/dump/concepts/mobile-shutter-menu/index.html",
+    "demo": "http://amoeba.social/dump/concepts/mobile-shutter-menu/index.html",
     "tags": [
       {
         "name": "frontend"
@@ -728,7 +715,7 @@
   },
   {
     "name": "Trigger Loader",
-    "src": "http://amoeba.social/dump/rob-the-robe",
+    "demo": "http://amoeba.social/dump/rob-the-robe",
     "tags": [
       {
         "name": "frontend"
@@ -744,7 +731,7 @@
   },
   {
     "name": "WhatsApp Theme",
-    "src": "http://amoeba.social/dump/concepts/legally",
+    "demo": "http://amoeba.social/dump/concepts/legally",
     "image": "images/portfolio-items/legal-app.gif",
     "tags": [
       {
@@ -761,7 +748,7 @@
   },
   {
     "name": "Form Design",
-    "src": "http://amoeba.social/dump/client-demo/treniq",
+    "demo": "http://amoeba.social/dump/client-demo/treniq",
     "tags": [
       {
         "name": "frontend"
@@ -777,7 +764,7 @@
   },
   {
     "name": "Accordion",
-    "src": "http://amoeba.social/dump/lab/accordian",
+    "demo": "http://amoeba.social/dump/lab/accordian",
     "tags": [
       {
         "name": "frontend"
@@ -793,7 +780,7 @@
   },
   {
     "name": "Blinking Owls",
-    "src": "http://amoeba.social/dump/lab/blinking-owls",
+    "demo": "http://amoeba.social/dump/lab/blinking-owls",
     "tags": [
       {
         "name": "frontend"
@@ -810,7 +797,7 @@
   {
     "type": "ui",
     "name": "Wave Surfer",
-    "src": "http://amoeba.social/dump/lab/music",
+    "demo": "http://amoeba.social/dump/lab/music",
     "tags": [
       {
         "name": "design"
