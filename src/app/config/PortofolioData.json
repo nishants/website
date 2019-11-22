@@ -69,7 +69,7 @@
   {
     "name": "Authenticating Users on Blockchains",
     "image": "images/portfolio-items/scatterjs.jpeg",
-    "src": "https://github.com/nishants/scatterjs-react",
+    "src": "https://medium.com/@nshnt/scatterjs-with-react-redux-and-saga-ed2956eb2991",
     "tags": [
       {
         "name": "development"
