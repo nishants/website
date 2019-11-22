@@ -15,7 +15,7 @@ const PortfolioCard = ({
 
     <div>
       {video && <Button href={video}>Watch Video</Button>}
-      {article && <Button href={demo}>Read</Button>}
+      {article && <Button href={article}>Read</Button>}
 
       {demo && <Button href={demo}>View Demo</Button>}
 
