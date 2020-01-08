@@ -12,7 +12,6 @@
       {
         "name": "development"
       }
-
     ],
     "description": {
       "lead": "Extending the idea of chatbot ",
@@ -22,7 +21,7 @@
   {
     "type": "ui",
     "name": "Jeyson Template Engine",
-    "src": "public/pages/jeyson",
+    "src": "https://github.com/nishants/jeyson",
     "tags": [
       {
         "name": "development"
@@ -46,13 +45,10 @@
     "name": "LookLike Matchers",
     "no-mobile": "true",
     "src": "public/pages/look_like",
-    "image": "images/portfolio-items/look_like_git.png",
+    "image": "https://github.com/nishants/look_like",
     "tags": [
       {
         "name": "development"
-      },
-      {
-        "name": "open-source"
       },
       {
         "name": "ruby"
@@ -113,6 +109,40 @@
     "description": {
       "lead": "Models are the vocabulary of a system. Models bring sanity to the codebase. Without them a codebase looks like a series of insane distorted thoughts.",
       "follow": "Just like models hold data and state, State functions abstracts the business logic from reducers and components"
+    }
+  },
+  {
+    "type": "devops",
+    "name": "101-Continuous Deployment With Azure Devops Server",
+    "src": "https://github.com/nishants/saxo-university/blob/master/azure%20devops%20server/01-create-an-agent-macos.md",
+    "tags": [
+      {
+        "name": "devops"
+      },
+      {
+        "name": "azure"
+      }
+    ],
+    "description": {
+      "lead": "",
+      "follow": "Quick guide to setup Continuous Deployment on a static website with Azure Devops server"
+    }
+  },
+  {
+    "type": "devops",
+    "name": "Running Azure Devops Agent on Local Machine",
+    "src": "https://github.com/nishants/saxo-university/blob/master/azure%20devops%20server/01-create-an-agent-macos.md",
+    "tags": [
+      {
+        "name": "devops"
+      },
+      {
+        "name": "azure"
+      }
+    ],
+    "description": {
+      "lead": "",
+      "follow": "Run an agent locally on your macbook and register with an agent pool on Azure Devops Server"
     }
   },
   {

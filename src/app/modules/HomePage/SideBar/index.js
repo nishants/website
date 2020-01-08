@@ -13,26 +13,20 @@ const SieBar = ({ search }) => {
   return (
     <div className="side-bar">
       <ul className="demo-links">
-        <li onClick={() => gotToSection('#coaching')}>
-          <Link to="/portfolio?search=#coaching">Coaching/Consulting</Link>
-        </li>
         <li onClick={() => gotToSection('#development')}>
-          <Link to="/portfolio?search=#development">Fullstack Development</Link>
+          <Link to="/portfolio?search=#development">Development</Link>
         </li>
-        <li onClick={() => gotToSection('#open-source')}>
-          <Link to="/portfolio?search=#open-source">Open Source</Link>
-        </li>
-        <li onClick={() => gotToSection('#testing')}>
-          <Link to="/portfolio?search=#testing">Test Automation </Link>
-        </li>
-        <li onClick={() => gotToSection('#tdd')}>
-          <Link to="/portfolio?search=#tdd">Test Driven Development</Link>
-        </li>
+
         <li onClick={() => gotToSection('#frontend')}>
-          <Link to="/portfolio?search=#frontend">Frontend Development</Link>
+          <Link to="/portfolio?search=#frontend">Frontend and Design</Link>
         </li>
-        <li onClick={() => gotToSection('#design')}>
-          <Link to="/portfolio?search=#design">Designs</Link>
+
+        <li onClick={() => gotToSection('#devops')}>
+          <Link to="/portfolio?search=#design">Devops</Link>
+        </li>
+
+        <li onClick={() => gotToSection('#coaching')}>
+          <Link to="/portfolio?search=#coaching">Coaching</Link>
         </li>
       </ul>
 
