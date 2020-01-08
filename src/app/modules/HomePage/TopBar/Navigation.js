@@ -26,7 +26,7 @@ class Navigation extends React.Component {
           <div className="profile-labels">
             <label className="profile-name">Nishant Singh</label>
             <label className="profile-title">
-              Designer | Craftsman | Consultant
+              Development | Design | Devops
             </label>
           </div>
         </div>
