@@ -63,27 +63,6 @@
     }
   },
   {
-    "name": "LookLike Matchers",
-    "no-mobile": "true",
-    "src": "public/pages/look_like",
-    "image": "https://github.com/nishants/look_like",
-    "tags": [
-      {
-        "name": "development"
-      },
-      {
-        "name": "ruby"
-      },
-      {
-        "name": "tdd"
-      }
-    ],
-    "description": {
-      "lead": "A ruby gem for integration/wireframe testing. ",
-      "follow": "Collection of RSpec matchers for testing based on visual pattern matching. Designed to work well with Cucumber and Selenium"
-    }
-  },
-  {
     "name": "Authenticating Users on Blockchains",
     "image": "images/portfolio-items/scatterjs.jpeg",
     "src": "https://medium.com/@nshnt/scatterjs-with-react-redux-and-saga-ed2956eb2991",
@@ -107,6 +86,28 @@
     "description": {
       "lead": "Comparing ScatterJS with OAuth flow and ",
       "follow": "impletmenting auth for EOS blockchain with React, Redux and Saga"
+    }
+  },
+  {
+    "name": "PowerShell For JS Developers",
+    "article": "https://medium.com/@nshnt/a-quick-byte-of-powershell-core-for-javascript-developers-23a0f17960c2",
+    "tags": [
+      {
+        "name": "development"
+      },
+      {
+        "name": "coaching"
+      },
+      {
+        "name": "powershell"
+      },
+      {
+        "name": "javascript"
+      }
+    ],
+    "description": {
+      "lead": "Quick intro to PowerShell",
+      "follow": "syntax for JS Developers"
     }
   },
   {

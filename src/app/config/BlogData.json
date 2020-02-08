@@ -1,5 +1,13 @@
 [
   {
+    "heading": "PowerShell For JS Developers",
+    "previewText": "Quick intro to PowerShell syntax for JS Developers",
+
+    "link": "https://medium.com/@nshnt/a-quick-byte-of-powershell-core-for-javascript-developers-23a0f17960c2",
+    "tags": [{"name": "powershell"}, {"name": "javascript"}
+    ]
+  },
+  {
     "heading": "Acceptance Test Driven Development",
     "image": "images/blog-items/atdd.png",
     "previewText": "ATDD or acceptance test driven development is the workflow for creating business softwares, in…",
