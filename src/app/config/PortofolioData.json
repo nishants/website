@@ -44,6 +44,27 @@
   {
     "name": "LookLike Matchers",
     "no-mobile": "true",
+    "src": "https://github.com/nishants/look_like",
+    "image": "images/portfolio-items/look_like_git.png",
+    "tags": [
+      {
+        "name": "development"
+      },
+      {
+        "name": "ruby"
+      },
+      {
+        "name": "tdd"
+      }
+    ],
+    "description": {
+      "lead": "A ruby gem for integration/wireframe testing. ",
+      "follow": "Collection of RSpec matchers for testing based on visual pattern matching. Designed to work well with Cucumber and Selenium"
+    }
+  },
+  {
+    "name": "LookLike Matchers",
+    "no-mobile": "true",
     "src": "public/pages/look_like",
     "image": "https://github.com/nishants/look_like",
     "tags": [
